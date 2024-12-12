@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "Templates/DS350_Template.html",
+    "href": "Templates/DS350_Template.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "TODO: Update with template from Paul\n\n\n\n\n Back to top"
+  },
+  {
     "objectID": "story_telling.html",
     "href": "story_telling.html",
     "title": "About Me",
@@ -49,63 +56,6 @@
     "text": "📬 Let’s Connect\n\nLinkedIn\nGitHub: github.com/drwill99\nEmail: dallin.williams@example.com"
   },
   {
-    "objectID": "ml.html",
-    "href": "ml.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "ml.html#title-2-header",
-    "href": "ml.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "competition.html",
-    "href": "competition.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "competition.html#title-2-header",
-    "href": "competition.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "Templates/DS250_Template.html",
-    "href": "Templates/DS250_Template.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Uncomment the entire section to use this template\n\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Projects/project2.html",
-    "href": "Projects/project2.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "DS250 Projects",
-      "Project 2"
-    ]
-  },
-  {
-    "objectID": "Projects/project3.html",
-    "href": "Projects/project3.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "DS250 Projects",
-      "Project 3"
-    ]
-  },
-  {
     "objectID": "projects.html",
     "href": "projects.html",
     "title": "DS250 Projects",
@@ -126,6 +76,163 @@
     ]
   },
   {
+    "objectID": "Projects/project4.html",
+    "href": "Projects/project4.html",
+    "title": "Client Report - Can You Predict That?",
+    "section": "",
+    "text": "We can predict if a house sold in Denver, CO in 2013 was built before or after 1980 with a machine learning model. We can measure the accuracy score of the model to see it’s effectiveness at predicting this.\n\n\nShow the code\nurl = \"https://raw.githubusercontent.com/byuidatascience/data4dwellings/master/data-raw/dwellings_ml/dwellings_ml.csv\"\n\ndwellings_ml = pd.read_csv(url)\n\n# dwellings_ml.head()",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 4"
+    ]
+  },
+  {
+    "objectID": "Projects/project4.html#elevator-pitch",
+    "href": "Projects/project4.html#elevator-pitch",
+    "title": "Client Report - Can You Predict That?",
+    "section": "",
+    "text": "We can predict if a house sold in Denver, CO in 2013 was built before or after 1980 with a machine learning model. We can measure the accuracy score of the model to see it’s effectiveness at predicting this.\n\n\nShow the code\nurl = \"https://raw.githubusercontent.com/byuidatascience/data4dwellings/master/data-raw/dwellings_ml/dwellings_ml.csv\"\n\ndwellings_ml = pd.read_csv(url)\n\n# dwellings_ml.head()",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 4"
+    ]
+  },
+  {
+    "objectID": "Projects/project4.html#questiontask-1",
+    "href": "Projects/project4.html#questiontask-1",
+    "title": "Client Report - Can You Predict That?",
+    "section": "QUESTION|TASK 1",
+    "text": "QUESTION|TASK 1\nCreate 2-3 charts that evaluate potential relationships between the home variables and before1980. Explain what you learn from the charts that could help a machine learning algorithm.\nI created 3 charts comparing the relationship between Year Built and Sell Price, Number of Bathrooms, and Number of Bedrooms. These comparisons help identify data trends useful for training the model.\n\n\nShow the code\n# relationship between 'yrbuilt' (year built) and 'sprice' (sell price)\nfig1 = px.scatter(\n  dwellings_ml, \n  x='yrbuilt', \n  y='sprice', \n  color='sprice', \n  title='Sell Price and Year Built', \n  labels={\n    'yrbuilt': 'Year Built', \n    'sprice': 'Sell Price'\n    }\n  )\n\n\n# relationship between 'yrbuilt' and 'numbaths' (number of bathrooms)\nbaths_count = dwellings_ml.groupby(['yrbuilt', 'numbaths']).size().reset_index(name='count')\n\nfig2 = px.bar(\n  baths_count, \n  x='yrbuilt', \n  y='count', \n  color='numbaths', \n  title='Number of Bathrooms and Year Built',\n  labels={\n    'yrbuilt': 'Year Built', \n    'count': 'Number of Houses', \n    'numbaths': 'Number of Bathrooms'\n    }\n  )\n\n\n# relationship between 'yrbuilt' and the 'numbdrm' (number of bedrooms)\nbedrooms_count = dwellings_ml.groupby(['yrbuilt', 'numbdrm']).size().reset_index(name='count')\n\nfig3 = px.bar(\n  bedrooms_count, \n  x='yrbuilt', \n  y='count', \n  color='numbdrm', \n  title='Number of Bedrooms and Year Built',\n  labels={\n    'yrbuilt': 'Year Built', \n    'count': 'Number of Houses', \n    'numbdrm': 'Number of Bedrooms'\n    }\n  )\n\n\nfig1.show()\nfig2.show()\nfig3.show()",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 4"
+    ]
+  },
+  {
+    "objectID": "Projects/project4.html#questiontask-2",
+    "href": "Projects/project4.html#questiontask-2",
+    "title": "Client Report - Can You Predict That?",
+    "section": "QUESTION|TASK 2",
+    "text": "QUESTION|TASK 2\nBuild a classification model labeling houses as being built “before 1980” or “during or after 1980”. Your goal is to reach or exceed 90% accuracy. Explain your final model choice (algorithm, tuning parameters, etc) and describe what other models you tried.\nI tested a Decision Tree and Random Forest Classifier. By dropping irrelevant columns (parcel, yrbuilt) and optimizing the dataset, the Random Forest model seemd to perform better.\n\n\nShow the code\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.metrics import accuracy_score\n\n# columns to drop to prepare training and test data\nfeatures_to_drop = ['parcel', 'abstrprd', 'before1980', 'yrbuilt']\nX = dwellings_ml.drop(columns=features_to_drop)\ny = dwellings_ml['before1980']\n\n# splitting dataset into training and testing sets\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)\n\n# initialize and train the Decision Tree Classifier\ndt_classifier = DecisionTreeClassifier(random_state=42)\ndt_classifier.fit(X_train, y_train)\n\n# predict on test set\ny_pred = dt_classifier.predict(X_test)\n\n# W10 P4 Quiz Question #1\n# average_first_10_test_y = y_test.iloc[:10].mean()\n# print(f\"{average_first_10_test_y}\\n\")\n\n# W10 P4 Quiz Question #2\n# average_first_10_training_X_sprice = X_train.iloc[:10]['sprice'].mean()\n# print(f\" Average of the first 10 values in training X values for the selling price (sprice): {average_first_10_training_X_sprice}\\n\")\n\n# calculate accuracy as percentage\naccuracy = accuracy_score(y_test, y_pred)\nprint(f\"DTC Model Accuracy: {accuracy * 100:.2f}%\")\n\n\nDTC Model Accuracy: 90.40%\n\n\n\n\nShow the code\nfrom sklearn.ensemble import RandomForestClassifier\n\n# initialize Random Forest Classifier model\nrf_classifier = RandomForestClassifier(random_state=42)\n\n# train model on training data\nrf_classifier.fit(X_train, y_train)\n\n# predict on testing data\ny_pred_rf = rf_classifier.predict(X_test)\n\naccuracy = accuracy_score(y_test, y_pred_rf)\nprint(f\"RFC Model Accuracy: {accuracy * 100:.2f}%\")\n\n\nRFC Model Accuracy: 92.62%",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 4"
+    ]
+  },
+  {
+    "objectID": "Projects/project4.html#questiontask-3",
+    "href": "Projects/project4.html#questiontask-3",
+    "title": "Client Report - Can You Predict That?",
+    "section": "QUESTION|TASK 3",
+    "text": "QUESTION|TASK 3\nJustify your classification model by discussing the most important features selected by your model. This discussion should include a feature importance chart and a description of the features.\nThe Random Forest model identified key predictors like location (are), architectural style (e.g., 1-story), and the number of bathrooms. These features were most impactful, achieving 92% accuracy.\n\n\nShow the code\n# extract feature importances from model\nfeature_importances = rf_classifier.feature_importances_\n\n# create dataframe for visualization\nfeatures_df = pd.DataFrame({'Feature': X.columns, 'Importance': feature_importances})\n\n# sort dataframe by importance\nfeatures_df = features_df.sort_values(by='Importance', ascending=False)\n\n# visualizing most important features\nfig = px.bar(\n  features_df.head(), \n  x='Importance', \n  y='Feature', \n  orientation='h',\n  title='5 Most Important Features in Predicting Year Built',\n  labels={\n    'Feature': 'Feature', \n    'Importance': 'Importance Score'\n    }\n  )\n\nfig.show()",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 4"
+    ]
+  },
+  {
+    "objectID": "Projects/project4.html#questiontask-4",
+    "href": "Projects/project4.html#questiontask-4",
+    "title": "Client Report - Can You Predict That?",
+    "section": "QUESTION|TASK 4",
+    "text": "QUESTION|TASK 4\nDescribe the quality of your classification model using 2-3 different evaluation metrics. You also need to explain how to interpret each of the evaluation metrics you use.\nI used Precision, Recall, and AUROC scores to evaluate the model. Precision measures the accuracy of predictions, Recall identifies the model’s sensitivity to ‘before 1980’ houses, and AUROC indicates overall classification performance.\n\n\nShow the code\nfrom sklearn.metrics import precision_score, recall_score, roc_auc_score\n\nprecision = precision_score(y_test, y_pred)\nrecall = recall_score(y_test, y_pred)\nauroc = roc_auc_score(y_test, y_pred)\n\nprint(f\"Precision: {precision * 100:.2f}%\")\nprint(f\"Recall: {recall * 100:.2f}%\")\nprint(f\"AUROC: {auroc * 100:.2f}%\")\n\n\nPrecision: 92.49%\nRecall: 92.15%\nAUROC: 89.81%",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 4"
+    ]
+  },
+  {
+    "objectID": "Projects/project2.html#elevator-pitch",
+    "href": "Projects/project2.html#elevator-pitch",
+    "title": "Client Report - Late Flights & Missing Data",
+    "section": "Elevator pitch",
+    "text": "Elevator pitch\nThe analysis reveals that San Francisco International (SFO) and Chicago O’Hare (ORD) experience the highest overall delays, with weather and carrier delays being the primary contributors. Delays peak during June and December, with weather-related issues playing a significant role, especially at SFO. To minimize delays, focusing on operational improvements during these peak months and addressing carrier-related inefficiencies will be crucial.\n\n\n\n\n\n\n\n\n\n\nairport_code\nairport_name\nmonth\nyear\nnum_of_flights_total\nnum_of_delays_carrier\nnum_of_delays_late_aircraft\nnum_of_delays_nas\nnum_of_delays_security\nnum_of_delays_weather\nnum_of_delays_total\nminutes_delayed_carrier\nminutes_delayed_late_aircraft\nminutes_delayed_nas\nminutes_delayed_security\nminutes_delayed_weather\nminutes_delayed_total\n\n\n\n\n0\nATL\nAtlanta, GA: Hartsfield-Jackson Atlanta Intern...\nJanuary\n2005.0\n35048\n1500+\nNaN\n4598\n10\n448\n8355\n116423.0\n104415\n207467.0\n297\n36931\n465533\n\n\n1\nDEN\nDenver, CO: Denver International\nJanuary\n2005.0\n12687\n1041\n928.0\n935\n11\n233\n3153\n53537.0\n70301\n36817.0\n363\n21779\n182797\n\n\n2\nIAD\nNaN\nJanuary\n2005.0\n12381\n414\n1058.0\n895\n4\n61\n2430\nNaN\n70919\n35660.0\n208\n4497\n134881\n\n\n3\nORD\nChicago, IL: Chicago O'Hare International\nJanuary\n2005.0\n28194\n1197\n2255.0\n5415\n5\n306\n9178\n88691.0\n160811\n364382.0\n151\n24859\n638894\n\n\n4\nSAN\nSan Diego, CA: San Diego International\nJanuary\n2005.0\n7283\n572\n680.0\n638\n7\n56\n1952\n27436.0\n38445\n21127.0\n218\n4326\n91552",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "Projects/project2.html#questiontask-1",
+    "href": "Projects/project2.html#questiontask-1",
+    "title": "Client Report - Late Flights & Missing Data",
+    "section": "Question|Task 1",
+    "text": "Question|Task 1\nFix all of the varied missing data types in the data to be consistent (all missing values should be displayed as “NaN”).\nThe dataset contained inconsistencies in how missing data was represented, such as “NA”, “N/A”, and “-999”. We standardized all missing data by replacing these values with “NaN”. This ensures that future calculations are not affected by placeholder values and that the data is consistent.\nExample of a row with missing values after cleaning:\n\n\n{\"airport_code\":\"ATL\",\"airport_name\":\"Atlanta, GA: Hartsfield-Jackson Atlanta International\",\"month\":\"January\",\"year\":2005.0,\"num_of_flights_total\":35048,\"num_of_delays_carrier\":\"1500+\",\"num_of_delays_late_aircraft\":null,\"num_of_delays_nas\":4598,\"num_of_delays_security\":10,\"num_of_delays_weather\":448,\"num_of_delays_total\":8355,\"minutes_delayed_carrier\":116423.0,\"minutes_delayed_late_aircraft\":104415,\"minutes_delayed_nas\":207467.0,\"minutes_delayed_security\":297,\"minutes_delayed_weather\":36931,\"minutes_delayed_total\":465533}\n\n\nThis record, for example, shows that the num_of_delays_late_aircraft field was missing, which is now represented as null. The data standardization allows for a more accurate analysis of the delay metrics.",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "Projects/project2.html#questiontask-2",
+    "href": "Projects/project2.html#questiontask-2",
+    "title": "Client Report - Late Flights & Missing Data",
+    "section": "Question|Task 2",
+    "text": "Question|Task 2\nWhich airport has the worst delays?\nTo identify which airport experiences the worst delays, we calculated the proportion of delayed flights at each airport. The proportion is calculated by dividing the total number of delayed flights by the total number of flights. The airport with the highest proportion of delays was San Francisco International Airport (SFO) with a delay rate of 26.10%, followed by Chicago O’Hare International (ORD) with 23.09%.\nHere is the summary table:\n\n\n\n\n\n\n\n\n\n\nairport_code\nairport_name\nnum_of_flights_total\nnum_of_delays_late_aircraft\nnum_of_delays_nas\nnum_of_delays_security\nnum_of_delays_weather\nnum_of_delays_total\nminutes_delayed_carrier\nminutes_delayed_late_aircraft\nminutes_delayed_nas\nminutes_delayed_security\nminutes_delayed_weather\nminutes_delayed_total\nproportion_delayed\naverage_delay_hours\n\n\n\n\n5\nSFO\nSan Francisco, CA: San Francisco International\n1630945\n124170.0\n203948\n697\n10377\n425604\n4961919.0\n8474050\n11614407.0\n29073\n775987\n26550493\n0.260955\n442508.216667\n\n\n3\nORD\nChicago, IL: Chicago O'Hare International\n3597588\n265714.0\n379233\n862\n20765\n830825\n10662192.0\n19583937\n22406236.0\n38573\n1909144\n56356129\n0.230939\n939268.816667\n\n\n0\nATL\nAtlanta, GA: Hartsfield-Jackson Atlanta Intern...\n4430047\n195674.0\n391849\n833\n32375\n902443\n14498087.0\n17890448\n17648526.0\n42658\n2691516\n53983926\n0.203710\n899732.100000\n\n\n2\nIAD\nWashington, DC: Washington Dulles International\n851571\n64837.0\n50812\n272\n4794\n168467\n2656658.0\n4693804\n2124150.0\n10443\n381680\n10283478\n0.197831\n171391.300000\n\n\n4\nSAN\nSan Diego, CA: San Diego International\n917862\n70601.0\n42590\n490\n4320\n175132\n2546242.0\n3759489\n1402014.0\n17464\n321292\n8276248\n0.190804\n137937.466667\n\n\n1\nDEN\nDenver, CO: Denver International\n2513974\n180001.0\n150496\n985\n13836\n468519\n6665810.0\n11078060\n5664667.0\n34740\n1120414\n25173381\n0.186366\n419556.350000\n\n\n6\nSLC\nSalt Lake City, UT: Salt Lake City International\n1403384\n79451.0\n52928\n867\n6831\n205160\n3267857.0\n4293269\n1717994.0\n27313\n518807\n10123371\n0.146189\n168722.850000\n\n\n\n\n\n\n\n\nThis is visualized in the following chart, where SFO stands out with the highest proportion of delayed flights.",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "Projects/project2.html#questiontask-3",
+    "href": "Projects/project2.html#questiontask-3",
+    "title": "Client Report - Late Flights & Missing Data",
+    "section": "Question|Task 3",
+    "text": "Question|Task 3\nWhat is the best month to fly if you want to avoid delays of any length?\nThe best months to fly to avoid delays are April and September, with the lowest proportion of delayed flights. These months have delay rates around 16-18%, compared to June and December, where delay rates rise above 25%.\nThis analysis is supported by the following bar chart:\n\n\n   \n   \n\n\nThe pattern shows a significant seasonal effect, with delays peaking during the winter holiday season (December) and early summer (June).",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "Projects/project2.html#questiontask-4",
+    "href": "Projects/project2.html#questiontask-4",
+    "title": "Client Report - Late Flights & Missing Data",
+    "section": "Question|Task 4",
+    "text": "Question|Task 4\nCreate a new column that calculates the total number of flights delayed by weather (both severe and mild).\nWe calculated the total number of flights delayed by weather, including both severe weather delays and milder weather conditions accounted for by the NAS and late-arriving aircraft categories.\nThe first few rows of the calculated total weather delays are displayed below:\n\n\n\n\n\n\n\n\n\n\nairport_code\nnum_of_delays_weather\nnum_of_delays_late_aircraft\nnum_of_delays_nas\ntotal_weather_delays\n\n\n\n\n0\nATL\n448\n1109.104072\n4598\n3769.431222\n\n\n1\nDEN\n233\n928.000000\n935\n1119.150000\n\n\n2\nIAD\n61\n1058.000000\n895\n960.150000\n\n\n3\nORD\n306\n2255.000000\n5415\n4502.250000\n\n\n4\nSAN\n56\n680.000000\n638\n674.700000",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "Projects/project2.html#questiontask-5",
+    "href": "Projects/project2.html#questiontask-5",
+    "title": "Client Report - Late Flights & Missing Data",
+    "section": "Question|Task 5",
+    "text": "Question|Task 5\nUsing the new weather variable calculated above, create a barplot showing the proportion of all flights that are delayed by weather at each airport. Describe what you learn from this graph.\nUsing the newly calculated weather delay variable, we created a bar plot to show the proportion of flights delayed by weather at each airport. The airport with the highest weather-related delays is San Francisco International (SFO), followed by Chicago O’Hare International (ORD).\nThe visualization below clearly demonstrates the dominance of weather-related delays at certain airports:",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "Projects/project2.html#stretch-questiontask",
+    "href": "Projects/project2.html#stretch-questiontask",
+    "title": "Client Report - Late Flights & Missing Data",
+    "section": "Stretch Question/Task",
+    "text": "Stretch Question/Task\nWhich delay is the worst delay?\nTo determine which type of delay is the most significant across airports, we compared the proportions of weather, carrier, and security delays. The chart below illustrates that carrier delays are the most prevalent at several airports, especially at San Francisco International (SFO) and Chicago O’Hare International (ORD), while weather delays also contribute significantly.\nInsights: - Weather delays account for the highest proportion of delays at most airports, particularly at SFO and ORD. - Security delays are minimal across all airports.",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "ml.html",
+    "href": "ml.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "ml.html#title-2-header",
+    "href": "ml.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
     "objectID": "full_stack.html",
     "href": "full_stack.html",
     "title": "about me",
@@ -140,46 +247,32 @@
     "text": "MarkDown Basics"
   },
   {
-    "objectID": "resume.html",
-    "href": "resume.html",
-    "title": "Dallin Williams’ CV",
+    "objectID": "competition.html",
+    "href": "competition.html",
+    "title": "about me",
     "section": "",
-    "text": "Machine Learning Engineer, Data Analyst, Life-Long Student\n\nMy LinkedIn | My GitHub\n\n\n\nStudying hard, crying harder\n\n\nPython, Linear Regression models, and Feedforward Neural Network Models with Sigmoid Activation Functions\n\n\n\nMachine Learning, Artificial Intelligence Tools, and Data Analytics\n\n\n\n\n2014-2017 Minot High School, Minot, ND, USA\n2020-Current BYU-Idaho, Rexburg, ID, USA\n\n\n\n2021 Best Chili - Minot 1st Ward Chili Cookoff\n\n\n\nN/A Yet\n\n\nN/A Yet\n\n\n\nN/A Yet\n\n\n\n\n2020-Current Full-Time Student, BYU-Idaho"
+    "text": "MarkDown Basics"
   },
   {
-    "objectID": "resume.html#currently",
-    "href": "resume.html#currently",
-    "title": "Dallin Williams’ CV",
+    "objectID": "competition.html#title-2-header",
+    "href": "competition.html#title-2-header",
+    "title": "about me",
     "section": "",
-    "text": "Studying hard, crying harder\n\n\nPython, Linear Regression models, and Feedforward Neural Network Models with Sigmoid Activation Functions\n\n\n\nMachine Learning, Artificial Intelligence Tools, and Data Analytics"
+    "text": "MarkDown Basics"
   },
   {
-    "objectID": "resume.html#education",
-    "href": "resume.html#education",
-    "title": "Dallin Williams’ CV",
+    "objectID": "cleansing.html",
+    "href": "cleansing.html",
+    "title": "about me",
     "section": "",
-    "text": "2014-2017 Minot High School, Minot, ND, USA\n2020-Current BYU-Idaho, Rexburg, ID, USA"
+    "text": "MarkDown Basics"
   },
   {
-    "objectID": "resume.html#awards",
-    "href": "resume.html#awards",
-    "title": "Dallin Williams’ CV",
+    "objectID": "cleansing.html#title-2-header",
+    "href": "cleansing.html#title-2-header",
+    "title": "about me",
     "section": "",
-    "text": "2021 Best Chili - Minot 1st Ward Chili Cookoff"
-  },
-  {
-    "objectID": "resume.html#publications",
-    "href": "resume.html#publications",
-    "title": "Dallin Williams’ CV",
-    "section": "",
-    "text": "N/A Yet\n\n\nN/A Yet\n\n\n\nN/A Yet"
-  },
-  {
-    "objectID": "resume.html#occupation",
-    "href": "resume.html#occupation",
-    "title": "Dallin Williams’ CV",
-    "section": "",
-    "text": "2020-Current Full-Time Student, BYU-Idaho"
+    "text": "MarkDown Basics"
   },
   {
     "objectID": "exploration.html",
@@ -194,46 +287,6 @@
     "title": "about me",
     "section": "",
     "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "Projects/project5.html",
-    "href": "Projects/project5.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "DS250 Projects",
-      "Project 5"
-    ]
-  },
-  {
-    "objectID": "Projects/project4.html",
-    "href": "Projects/project4.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "DS250 Projects",
-      "Project 4"
-    ]
-  },
-  {
-    "objectID": "Projects/project1.html",
-    "href": "Projects/project1.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "DS250 Projects",
-      "Project 1"
-    ]
-  },
-  {
-    "objectID": "Templates/DS350_Template.html",
-    "href": "Templates/DS350_Template.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "TODO: Update with template from Paul\n\n\n\n\n Back to top"
   },
   {
     "objectID": "index.html",
@@ -285,17 +338,239 @@
     "text": "📬 Let’s Connect\n\nLinkedIn\nGitHub: github.com/drwill99\nEmail: dallin.williams@example.com"
   },
   {
-    "objectID": "cleansing.html",
-    "href": "cleansing.html",
-    "title": "about me",
+    "objectID": "Projects/project1.html",
+    "href": "Projects/project1.html",
+    "title": "Client Report - What’s in a Name?",
     "section": "",
-    "text": "MarkDown Basics"
+    "text": "Show the code\nimport pandas as pd\nfrom lets_plot import *\n\nLetsPlot.setup_html()\n\n# Load the data\nurl = \"https://raw.githubusercontent.com/byuidatascience/data4names/master/data-raw/names_year/names_year.csv\"\nnames_data = pd.read_csv(url)\n\n# Filter for name \"Dallin\"\ndallin_data = names_data[names_data['name'] == 'Dallin'] # I've always wanted to be a variable :)\n\n# Remove commas from years and increment by 5-years\nyear_breaks = list(range(int(dallin_data['year'].min()), int(dallin_data['year'].max()) + 1, 5))\n\n# Create plot, trend of name \"Dallin\" over time\ndallin_plot = (ggplot(dallin_data, aes(x = 'year', y = 'Total')) \n        + geom_line() \n        + ggtitle('Trend of the name \"Dallin\" over time') \n        + xlab('Year') \n        + ylab('Total Occurrences')\n        + scale_x_continuous(breaks = year_breaks))  # Use continuous scale with 5-year increments\n\ndallin_plot\n\n\n\n            \n            \n            \n\n\n   \n   \n\n\nAnalysis: The name “Dallin” saw increased popularity during the early 2000s, likely correlating with certain cultural trends or notable figures (example: Dallin H. Oaks). It has since experienced a steady decline in use.\n\n\n\n\n\n\nShow the code\n# Filter for name \"Brittany\"\nbrittany_data = names_data[names_data['name'] == 'Brittany']\n\n# Remove commas from years and increment by 5-years\nyear_breaks = list(range(int(brittany_data['year'].min()), int(brittany_data['year'].max()) + 1, 5))\n\n# Create plot, trend of name \"Brittany\" over time\nbrittany_plot = (ggplot(brittany_data, aes(x = 'year', y = 'Total')) \n        + geom_line() \n        + ggtitle('Trend of the name \"Brittany\" over time') \n        + xlab('Year') \n        + ylab('Total Occurrences')\n        + scale_x_continuous(breaks = year_breaks))\n\nbrittany_plot\n\n\n   \n   \n\n\nAnalysis: The name “Brittany” reached its peak popularity between the late 1980s and early 1990s. If speaking to someone named Brittany, they are likely in their late 20s to early 30s. Ages younger than 20 or older than 40 would be unlikely.\n\n\n\n\n\n\nShow the code\nchristian_data = names_data[(names_data['name'].isin(['Mary', 'Martha', 'Peter', 'Paul'])) & \n                             (names_data['year'] &gt;= 1920) & \n                             (names_data['year'] &lt;= 2000)]\n\n# Remove commas from years and increment by 5-years\nyear_breaks = list(range(int(christian_data['year'].min()), int(christian_data['year'].max()) + 1, 5))\n\n# Plot the trends of the four names\nchristian_plot = (\n  ggplot(christian_data, aes(x = 'year', y = 'Total', color='name')) \n        + geom_line() \n        + ggtitle('Christian Names (Mary, Martha, Peter, Paul) 1920-2000') \n        + xlab('Year') \n        + ylab('Total Occurrences')\n        + scale_x_continuous(breaks = year_breaks)\n)\n\nchristian_plot\n\n\n   \n   \n\n\nAnalysis: Among the four names, “Mary” consistently remains the most popular, though it has seen a gradual decline since the 1950s. “Paul” and “Peter” show moderate use, while “Martha” has been in decline since the 1960s.\n\n\n\n\n\n\nShow the code\n# Filter the dataset for the name \"Leia\" (e.g., from Star Wars)\nleia_data = names_data[names_data['name'] == 'Leia']\n\n# Remove commas from years and increment by 5-years\nyear_breaks = list(range(int(leia_data['year'].min()), int(leia_data['year'].max()) + 1, 5))\n\n# Plot the total occurrences of the name over time with reference to the movies release dates (1977 & 2002)\nleia_plot = (\n    ggplot(leia_data, aes(x='year', y='Total')) \n    + geom_line() \n    + geom_vline(xintercept=1977, color='blue', linetype='dashed')\n    + geom_text(x=1977, y=leia_data['Total'].max(),\n                label='Episode IV (1977)',\n                color='blue', hjust=-0.1, vjust=-0.5)\n    + geom_vline(xintercept=2002, color='red', linetype='dashed')\n    + geom_text(x=2002, y=leia_data['Total'].max(),\n                label='Episode II (2002)',\n                color='red', hjust=-0.1, vjust=-0.5)\n    + ggtitle('Trend of the name \"Leia\" and Star Wars release') \n    + xlab('Year') \n    + ylab('Total Occurrences')\n    + scale_x_continuous(breaks=list(range(\n      int(leia_data['year'].min()), \n      int(leia_data['year'].max()) + 1, 10\n      )\n    )\n  )\n)\n\nleia_plot\n\n\n   \n   \n\n\nAnalysis: The name “Leia” experienced a small increase in use following the release of Star Wars: Episode IV - A New Hope in 1977. However, a much larger increase ocurred after the release of Star Wars: Episode II - Attack of the Clones. This suggests that once Star Wars became mainstream and “cool”, the popularity of the name increased relatively dramatically.\n\n\n\n\n\n\nShow the code\n# Filter for name \"Elliot\"\nelliot_data = names_data[names_data['name'] == 'Elliot']\n\n# Define significant years and labels for vertical lines\nrelease_years = [1982, 1985, 2002]  # These years are based on events related to E.T. movie releases\nlabels = ['E.T Released', 'Second Release', 'Third Release']\n\n# Create plot: trend of name \"Elliot\" over time\nelliot_plot = (\n    ggplot(elliot_data, aes(x='year', y='Total', color='name')) \n    + geom_line()\n    + geom_vline(xintercept=1977, color='blue', linetype='dashed')\n    + geom_text(x=1977, y=leia_data['Total'].max(),\n                label='Episode IV (1977)',\n                color='blue', hjust=-0.1, vjust=-0.5)\n    + ggtitle('Elliot... What?') \n    + xlab('year') \n    + ylab('Total')\n    + scale_x_continuous(breaks=list(range(1950, 2021, 10)))  # 10-year increments\n)\n\nelliot_plot\n\n\n   \n   \n\n\n\n\nShow the code\n# Adjusted function based on the structure where each state is a separate column\ndef answer_name_questions_corrected(name, state_column=None):\n    # Filter for the given name\n    filtered_data = names_data[names_data['name'] == name]\n    \n    # Answer 1: How many babies were named \"Oliver\" in the given state (e.g., Utah)\n    if name == \"Oliver\" and state_column:\n        total_oliver_state = filtered_data[state_column].sum()\n        return f\"Total number of babies named Oliver in {state_column}: {total_oliver_state}\"\n    \n    # Answer 2: Earliest year the name \"Felisha\" was used\n    if name == \"Felisha\":\n        earliest_year = filtered_data['year'].min()\n        return f\"The earliest year that the name Felisha was used: {earliest_year}\"\n\n# Run the function for Oliver in Utah (column \"UT\")\noliver_utah_corrected_answer = answer_name_questions_corrected(\"Oliver\", \"UT\")\n\n# Run the function for Felisha\nfelisha_corrected_answer = answer_name_questions_corrected(\"Felisha\")\n\noliver_utah_corrected_answer, felisha_corrected_answer\n\n\n('Total number of babies named Oliver in UT: 1704.0',\n 'The earliest year that the name Felisha was used: 1964')",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 1"
+    ]
   },
   {
-    "objectID": "cleansing.html#title-2-header",
-    "href": "cleansing.html#title-2-header",
-    "title": "about me",
+    "objectID": "Projects/project1.html#question-1-how-does-your-name-at-your-birth-year-compare-to-its-use-historically",
+    "href": "Projects/project1.html#question-1-how-does-your-name-at-your-birth-year-compare-to-its-use-historically",
+    "title": "Client Report - What’s in a Name?",
     "section": "",
-    "text": "MarkDown Basics"
+    "text": "Show the code\nimport pandas as pd\nfrom lets_plot import *\n\nLetsPlot.setup_html()\n\n# Load the data\nurl = \"https://raw.githubusercontent.com/byuidatascience/data4names/master/data-raw/names_year/names_year.csv\"\nnames_data = pd.read_csv(url)\n\n# Filter for name \"Dallin\"\ndallin_data = names_data[names_data['name'] == 'Dallin'] # I've always wanted to be a variable :)\n\n# Remove commas from years and increment by 5-years\nyear_breaks = list(range(int(dallin_data['year'].min()), int(dallin_data['year'].max()) + 1, 5))\n\n# Create plot, trend of name \"Dallin\" over time\ndallin_plot = (ggplot(dallin_data, aes(x = 'year', y = 'Total')) \n        + geom_line() \n        + ggtitle('Trend of the name \"Dallin\" over time') \n        + xlab('Year') \n        + ylab('Total Occurrences')\n        + scale_x_continuous(breaks = year_breaks))  # Use continuous scale with 5-year increments\n\ndallin_plot\n\n\n\n            \n            \n            \n\n\n   \n   \n\n\nAnalysis: The name “Dallin” saw increased popularity during the early 2000s, likely correlating with certain cultural trends or notable figures (example: Dallin H. Oaks). It has since experienced a steady decline in use.",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "Projects/project1.html#question-2-if-you-talked-to-someone-named-brittany-on-the-phone-what-is-your-guess-of-his-or-her-age-what-ages-would-you-not-guess",
+    "href": "Projects/project1.html#question-2-if-you-talked-to-someone-named-brittany-on-the-phone-what-is-your-guess-of-his-or-her-age-what-ages-would-you-not-guess",
+    "title": "Client Report - What’s in a Name?",
+    "section": "",
+    "text": "Show the code\n# Filter for name \"Brittany\"\nbrittany_data = names_data[names_data['name'] == 'Brittany']\n\n# Remove commas from years and increment by 5-years\nyear_breaks = list(range(int(brittany_data['year'].min()), int(brittany_data['year'].max()) + 1, 5))\n\n# Create plot, trend of name \"Brittany\" over time\nbrittany_plot = (ggplot(brittany_data, aes(x = 'year', y = 'Total')) \n        + geom_line() \n        + ggtitle('Trend of the name \"Brittany\" over time') \n        + xlab('Year') \n        + ylab('Total Occurrences')\n        + scale_x_continuous(breaks = year_breaks))\n\nbrittany_plot\n\n\n   \n   \n\n\nAnalysis: The name “Brittany” reached its peak popularity between the late 1980s and early 1990s. If speaking to someone named Brittany, they are likely in their late 20s to early 30s. Ages younger than 20 or older than 40 would be unlikely.",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "Projects/project1.html#question-3-mary-martha-peter-and-paul-are-all-christian-names.-from-1920---2000-compare-the-name-usage-of-each-of-the-four-names-in-a-single-chart.-what-trends-do-you-notice",
+    "href": "Projects/project1.html#question-3-mary-martha-peter-and-paul-are-all-christian-names.-from-1920---2000-compare-the-name-usage-of-each-of-the-four-names-in-a-single-chart.-what-trends-do-you-notice",
+    "title": "Client Report - What’s in a Name?",
+    "section": "",
+    "text": "Show the code\nchristian_data = names_data[(names_data['name'].isin(['Mary', 'Martha', 'Peter', 'Paul'])) & \n                             (names_data['year'] &gt;= 1920) & \n                             (names_data['year'] &lt;= 2000)]\n\n# Remove commas from years and increment by 5-years\nyear_breaks = list(range(int(christian_data['year'].min()), int(christian_data['year'].max()) + 1, 5))\n\n# Plot the trends of the four names\nchristian_plot = (\n  ggplot(christian_data, aes(x = 'year', y = 'Total', color='name')) \n        + geom_line() \n        + ggtitle('Christian Names (Mary, Martha, Peter, Paul) 1920-2000') \n        + xlab('Year') \n        + ylab('Total Occurrences')\n        + scale_x_continuous(breaks = year_breaks)\n)\n\nchristian_plot\n\n\n   \n   \n\n\nAnalysis: Among the four names, “Mary” consistently remains the most popular, though it has seen a gradual decline since the 1950s. “Paul” and “Peter” show moderate use, while “Martha” has been in decline since the 1960s.",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "Projects/project1.html#question-4-think-of-a-unique-name-from-a-famous-movie.-plot-the-usage-of-that-name-and-see-how-changes-line-up-with-the-movie-release.-does-it-look-like-the-movie-had-an-effect-on-usage",
+    "href": "Projects/project1.html#question-4-think-of-a-unique-name-from-a-famous-movie.-plot-the-usage-of-that-name-and-see-how-changes-line-up-with-the-movie-release.-does-it-look-like-the-movie-had-an-effect-on-usage",
+    "title": "Client Report - What’s in a Name?",
+    "section": "",
+    "text": "Show the code\n# Filter the dataset for the name \"Leia\" (e.g., from Star Wars)\nleia_data = names_data[names_data['name'] == 'Leia']\n\n# Remove commas from years and increment by 5-years\nyear_breaks = list(range(int(leia_data['year'].min()), int(leia_data['year'].max()) + 1, 5))\n\n# Plot the total occurrences of the name over time with reference to the movies release dates (1977 & 2002)\nleia_plot = (\n    ggplot(leia_data, aes(x='year', y='Total')) \n    + geom_line() \n    + geom_vline(xintercept=1977, color='blue', linetype='dashed')\n    + geom_text(x=1977, y=leia_data['Total'].max(),\n                label='Episode IV (1977)',\n                color='blue', hjust=-0.1, vjust=-0.5)\n    + geom_vline(xintercept=2002, color='red', linetype='dashed')\n    + geom_text(x=2002, y=leia_data['Total'].max(),\n                label='Episode II (2002)',\n                color='red', hjust=-0.1, vjust=-0.5)\n    + ggtitle('Trend of the name \"Leia\" and Star Wars release') \n    + xlab('Year') \n    + ylab('Total Occurrences')\n    + scale_x_continuous(breaks=list(range(\n      int(leia_data['year'].min()), \n      int(leia_data['year'].max()) + 1, 10\n      )\n    )\n  )\n)\n\nleia_plot\n\n\n   \n   \n\n\nAnalysis: The name “Leia” experienced a small increase in use following the release of Star Wars: Episode IV - A New Hope in 1977. However, a much larger increase ocurred after the release of Star Wars: Episode II - Attack of the Clones. This suggests that once Star Wars became mainstream and “cool”, the popularity of the name increased relatively dramatically.",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "Projects/project1.html#stretch",
+    "href": "Projects/project1.html#stretch",
+    "title": "Client Report - What’s in a Name?",
+    "section": "",
+    "text": "Show the code\n# Filter for name \"Elliot\"\nelliot_data = names_data[names_data['name'] == 'Elliot']\n\n# Define significant years and labels for vertical lines\nrelease_years = [1982, 1985, 2002]  # These years are based on events related to E.T. movie releases\nlabels = ['E.T Released', 'Second Release', 'Third Release']\n\n# Create plot: trend of name \"Elliot\" over time\nelliot_plot = (\n    ggplot(elliot_data, aes(x='year', y='Total', color='name')) \n    + geom_line()\n    + geom_vline(xintercept=1977, color='blue', linetype='dashed')\n    + geom_text(x=1977, y=leia_data['Total'].max(),\n                label='Episode IV (1977)',\n                color='blue', hjust=-0.1, vjust=-0.5)\n    + ggtitle('Elliot... What?') \n    + xlab('year') \n    + ylab('Total')\n    + scale_x_continuous(breaks=list(range(1950, 2021, 10)))  # 10-year increments\n)\n\nelliot_plot\n\n\n   \n   \n\n\n\n\nShow the code\n# Adjusted function based on the structure where each state is a separate column\ndef answer_name_questions_corrected(name, state_column=None):\n    # Filter for the given name\n    filtered_data = names_data[names_data['name'] == name]\n    \n    # Answer 1: How many babies were named \"Oliver\" in the given state (e.g., Utah)\n    if name == \"Oliver\" and state_column:\n        total_oliver_state = filtered_data[state_column].sum()\n        return f\"Total number of babies named Oliver in {state_column}: {total_oliver_state}\"\n    \n    # Answer 2: Earliest year the name \"Felisha\" was used\n    if name == \"Felisha\":\n        earliest_year = filtered_data['year'].min()\n        return f\"The earliest year that the name Felisha was used: {earliest_year}\"\n\n# Run the function for Oliver in Utah (column \"UT\")\noliver_utah_corrected_answer = answer_name_questions_corrected(\"Oliver\", \"UT\")\n\n# Run the function for Felisha\nfelisha_corrected_answer = answer_name_questions_corrected(\"Felisha\")\n\noliver_utah_corrected_answer, felisha_corrected_answer\n\n\n('Total number of babies named Oliver in UT: 1704.0',\n 'The earliest year that the name Felisha was used: 1964')",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "Projects/project3.html",
+    "href": "Projects/project3.html",
+    "title": "Client Report - Finding Relationships in Baseball",
+    "section": "",
+    "text": "Show the code\nimport sqlite3\nimport pandas as pd\nimport numpy as np\nimport plotly.express as px\nimport urllib.request\nimport tempfile",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 3"
+    ]
+  },
+  {
+    "objectID": "Projects/project3.html#elevator-pitch",
+    "href": "Projects/project3.html#elevator-pitch",
+    "title": "Client Report - Finding Relationships in Baseball",
+    "section": "Elevator Pitch",
+    "text": "Elevator Pitch\nMy analysis revealed notable insights into baseball player salaries and performance metrics. I identified substantial differences in average salaries between top teams, with historical data illustrating trends in compensation. Additionally, batting averages and career-long player statistics highlighted players who consistently excel, providing benchmarks for team performance and individual accomplishments across different positions.\n\n\nLoad the data\nsqlite_file = 'lahmansbaseballdb.sqlite'\ncon = sqlite3.connect(sqlite_file)\n\nq = 'SELECT * FROM allstarfull LIMIT 5'\nresults = pd.read_sql_query(q,con)\n\n\n\n\nShow all of the tables in the database.\n# SQL query\nsql = \"SELECT name FROM sqlite_master WHERE type='table';\"\n\n# execute the SQL query and load results into a dataframe\ndf_tables = pd.read_sql_query(sql, con)\n\nprint(df_tables)",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 3"
+    ]
+  },
+  {
+    "objectID": "Projects/project3.html#question-1",
+    "href": "Projects/project3.html#question-1",
+    "title": "Client Report - Finding Relationships in Baseball",
+    "section": "Question 1",
+    "text": "Question 1\nWrite an SQL query to create a new dataframe about baseball players who attended BYU-Idaho. The new table should contain five columns: playerID, schoolID, salary, and the yearID/teamID associated with each salary. Order the table by salary (highest to lowest) and print out the table in your report.\n\n\nQuestion 1\ndf1 = pd.read_sql_query(\"\"\"\n    SELECT p.playerID, p.nameFirst, p.nameLast, MAX(s.salary) AS max_salary\n    FROM people p\n    LEFT JOIN collegeplaying sc ON p.playerID = sc.playerID\n    LEFT JOIN salaries s ON p.playerID = s.playerID\n    WHERE sc.schoolID = 'idbyuid'\n    GROUP BY p.playerID, p.nameFirst, p.nameLast\n    ORDER BY max_salary DESC\n    LIMIT 10;\n    \"\"\", con)\n\nprint(df1.to_markdown())\n\n\n|    | playerID   | nameFirst   | nameLast   |   max_salary |\n|---:|:-----------|:------------|:-----------|-------------:|\n|  0 | lindsma01  | Matt        | Lindstrom  |    4e+06     |\n|  1 | stephga01  | Garrett     | Stephenson |    1.025e+06 |\n|  2 | catetr01   | Troy        | Cate       |  nan         |",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 3"
+    ]
+  },
+  {
+    "objectID": "Projects/project3.html#question-2",
+    "href": "Projects/project3.html#question-2",
+    "title": "Client Report - Finding Relationships in Baseball",
+    "section": "Question 2",
+    "text": "Question 2\nThis three-part question requires you to calculate batting average (number of hits divided by the number of at-bats)\n\nWrite an SQL query that provides playerID, yearID, and batting average for players with at least 1 at bat that year. Sort the table from highest batting average to lowest, and then by playerid alphabetically. Show the top 5 results in your report.\nUse the same query as above, but only include players with at least 10 at bats that year. Print the top 5 results.\nNow calculate the batting average for players over their entire careers (all years combined). Only include players with at least 100 at bats, and print the top 5 results.\n\n\n\nQuestion 2A\ndf2 = pd.read_sql_query(\"\"\"\n    SELECT b.playerID, b.yearID, b.teamID, CAST(b.H AS FLOAT) / b.AB AS batting_average\n    FROM batting b\n    WHERE b.AB &gt;= 1\n    ORDER BY batting_average DESC, b.playerID ASC\n    LIMIT 5;\n    \"\"\", con)\n\nprint(df2.head(6).to_markdown())\n\n\n|    | playerID   |   yearID | teamID   |   batting_average |\n|---:|:-----------|---------:|:---------|------------------:|\n|  0 | aberal01   |     1957 | KC1      |                 1 |\n|  1 | abernte02  |     1960 | WS1      |                 1 |\n|  2 | abramge01  |     1923 | CIN      |                 1 |\n|  3 | acklefr01  |     1964 | CHA      |                 1 |\n|  4 | alanirj01  |     2019 | CIN      |                 1 |\n\n\n\n\nQuestion 2B\ndf3 = pd.read_sql_query(\"\"\"\n    SELECT a.playerID, a.yearID, a.teamID, AVG(b.AB) AS average\n    FROM allstarfull a\n    INNER JOIN batting b ON a.playerID = b.playerID\n    WHERE b.AB &gt;= 10\n    GROUP BY a.playerID\n    ORDER BY average DESC;\n    \"\"\", con)\n\nprint(df3.head(6).to_markdown())\n\n\n|    | playerID   |   yearID | teamID   |   average |\n|---:|:-----------|---------:|:---------|----------:|\n|  0 | puckeki01  |     1986 | MIN      |   603.667 |\n|  1 | alonspe01  |     2019 | NYN      |   597     |\n|  2 | abreujo02  |     2014 | CHA      |   591.167 |\n|  3 | markani01  |     2018 | ATL      |   583.714 |\n|  4 | lindofr01  |     2016 | CLE      |   580.8   |\n|  5 | hosmeer01  |     2016 | KCA      |   580.333 |\n\n\n\n\nQuestion 2C\ndf4 = pd.read_sql_query(\"\"\"\n    SELECT a.playerID, a.yearID, a.teamID, AVG(b.AB) AS average\n    FROM allstarfull a\n    INNER JOIN batting b ON a.playerID = b.playerID\n    WHERE b.AB &gt;= 100\n    GROUP BY a.playerID\n    ORDER BY average DESC;\n    \"\"\", con)\n\nprint(df4.head(6).to_markdown())\n\n\n|    | playerID   |   yearID | teamID   |   average |\n|---:|:-----------|---------:|:---------|----------:|\n|  0 | jeterde01  |     1998 | NYA      |   615.778 |\n|  1 | youngmi02  |     2004 | TEX      |   605     |\n|  2 | puckeki01  |     1986 | MIN      |   603.667 |\n|  3 | alonspe01  |     2019 | NYN      |   597     |\n|  4 | abreujo02  |     2014 | CHA      |   591.167 |\n|  5 | markani01  |     2018 | ATL      |   583.714 |",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 3"
+    ]
+  },
+  {
+    "objectID": "Projects/project3.html#question-3",
+    "href": "Projects/project3.html#question-3",
+    "title": "Client Report - Finding Relationships in Baseball",
+    "section": "Question 3",
+    "text": "Question 3\nPick any two baseball teams and compare them using a metric of your choice (average salary, home runs, number of wins, etc). Write an SQL query to get the data you need, then make a graph using Plotly Express to visualize the comparison. What do you learn?\n\n\nQuestion 3\n'''\ndf4 = pd.read_sql_query(\"\"\"\n    SELECT t.teamID, t.name, round(AVG(b.AB),0) AS average_salary\n    FROM allstarfull a\n    INNER JOIN batting b ON a.playerID = b.playerID\n    INNER JOIN teams t ON a.teamID = t.teamID\n    WHERE t.teamID = 'NYY' OR t.teamID = 'BOS'\n    GROUP BY a.teamID\n    ORDER BY average_salary DESC;\n    \"\"\", con)\n'''\ndf4 = pd.read_sql_query(\"\"\"\n    SELECT t.teamID, \n          t.name, \n          s.yearID, \n          '$' || printf('%.2f', AVG(s.salary) / 1000000) || 'M' AS average_salary\n    FROM salaries s\n    INNER JOIN teams t ON s.teamID = t.teamID\n    WHERE t.name IN ('New York Yankees', 'Boston Red Sox')\n    GROUP BY t.teamID, t.name, s.yearID\n    ORDER BY t.name DESC, s.yearID DESC;\n\"\"\", con)\n\nprint(df4.head(30).to_markdown())\n\n\n|    | teamID   | name             |   yearID | average_salary   |\n|---:|:---------|:-----------------|---------:|:-----------------|\n|  0 | NYA      | New York Yankees |     2016 | $7.69M           |\n|  1 | NYA      | New York Yankees |     2015 | $7.34M           |\n|  2 | NYA      | New York Yankees |     2014 | $8.23M           |\n|  3 | NYA      | New York Yankees |     2013 | $7.48M           |\n|  4 | NYA      | New York Yankees |     2012 | $6.78M           |\n|  5 | NYA      | New York Yankees |     2011 | $6.98M           |\n|  6 | NYA      | New York Yankees |     2010 | $8.25M           |\n|  7 | NYA      | New York Yankees |     2009 | $7.75M           |\n|  8 | NYA      | New York Yankees |     2008 | $6.93M           |\n|  9 | NYA      | New York Yankees |     2007 | $6.76M           |\n| 10 | NYA      | New York Yankees |     2006 | $6.95M           |\n| 11 | NYA      | New York Yankees |     2005 | $8.01M           |\n| 12 | NYA      | New York Yankees |     2004 | $6.35M           |\n| 13 | NYA      | New York Yankees |     2003 | $5.46M           |\n| 14 | NYA      | New York Yankees |     2002 | $4.34M           |\n| 15 | NYA      | New York Yankees |     2001 | $3.62M           |\n| 16 | NYA      | New York Yankees |     2000 | $3.30M           |\n| 17 | NYA      | New York Yankees |     1999 | $2.99M           |\n| 18 | NYA      | New York Yankees |     1998 | $2.09M           |\n| 19 | NYA      | New York Yankees |     1997 | $2.15M           |\n| 20 | NYA      | New York Yankees |     1996 | $1.59M           |\n| 21 | NYA      | New York Yankees |     1995 | $1.44M           |\n| 22 | NYA      | New York Yankees |     1994 | $1.58M           |\n| 23 | NYA      | New York Yankees |     1993 | $1.29M           |\n| 24 | NYA      | New York Yankees |     1992 | $1.14M           |\n| 25 | NYA      | New York Yankees |     1991 | $0.98M           |\n| 26 | NYA      | New York Yankees |     1990 | $0.63M           |\n| 27 | NYA      | New York Yankees |     1989 | $0.55M           |\n| 28 | NYA      | New York Yankees |     1988 | $0.65M           |\n| 29 | NYA      | New York Yankees |     1987 | $0.49M           |\n\n\n::: {#cell-Question 3 plotly .cell execution_count=10}\n\nQuestion 3 Graph\nimport plotly.graph_objects as go\n# Convert average_salary to a numeric value (removing $ and M for plotting)\ndf4['average_salary_numeric'] = df4['average_salary'].str.replace('$', '').str.replace('M', '').astype(float)\n\n# Create a line plot\nfig = px.line(df4, \n             x='yearID', \n             y='average_salary_numeric', \n             color='name',\n             title='Average Salary Team Comparison', \n             labels={'average_salary_numeric': 'Average Salary (in Millions USD)', 'name': 'Team Name'},\n             text='average_salary')  # label formatted average salary\n\nfig.update_layout(\n    xaxis=dict(\n        showline=True,\n        showgrid=False,\n        linecolor='rgb(204, 204, 204)',\n        linewidth=2,\n        ticks='outside'\n    ),\n    yaxis=dict(\n        showgrid=False,\n        zeroline=False,\n        showticklabels=True\n    ),\n    title=dict(\n        font=dict(\n            size=26,\n            color='black',\n            family='Arial'\n        )\n    ),\n    autosize=True,\n    margin=dict(\n        l=100,\n        r=20,\n        t=110\n    ),\n    showlegend=True,\n    plot_bgcolor='white'\n)\n\nfig.show()\n\n\n                                                \n\n:::",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 3"
+    ]
+  },
+  {
+    "objectID": "Projects/project3.html#stretch-questions",
+    "href": "Projects/project3.html#stretch-questions",
+    "title": "Client Report - Finding Relationships in Baseball",
+    "section": "Stretch Questions",
+    "text": "Stretch Questions\nAdvanced Salary Distribution by Position (with Case Statement):\nWrite an SQL query that provides a summary table showing the average salary for players in each position (e.g., pitcher, catcher, outfielder) across all years. Include the following columns:\nposition average_salary total_players highest_salary The highest_salary column should display the highest salary ever earned by a player in that position. If no player in that position has a recorded salary, display “N/A” for the highest salary.\nAdditionally, create a new column called salary_category using a case statement:\nIf the average salary is above $1 million, categorize it as “High Salary.” If the average salary is between $500,000 and $1 million, categorize it as “Medium Salary.” Otherwise, categorize it as “Low Salary.” Order the table by average salary in descending order.\nPrint the top 10 rows of this summary table.\n\n\nQuestion stretch 1\ndf5 = pd.read_sql_query(\"\"\"\n    SELECT\n        CASE \n            WHEN startingPos = 1 THEN 'pitcher'\n            WHEN startingPos = 2 THEN 'catcher'\n            WHEN startingPos = 3 THEN 'midfielder'\n            WHEN startingPos = 4 THEN 'first base'\n            WHEN startingPos = 5 THEN 'second base'\n            ELSE 'None'\n        END AS position_name,\n        '$' || printf('%.2f', AVG(s.salary) / 1000000) || 'M' AS average_salary,\n        '$' || printf('%.2f', MAX(s.salary) / 1000000) || 'M' AS highest_salary,\n        COUNT(t.playerID) AS number_player, \n        CASE \n            WHEN AVG(s.salary) &gt; 1000000 THEN 'High Salary'\n            WHEN AVG(s.salary) &gt; 500000 AND AVG(s.salary) &lt;= 1000000 THEN 'Medium Salary'\n            WHEN AVG(s.salary) &lt;= 500000 THEN 'Low Salary'\n            ELSE NULL\n        END AS category\n    FROM allstarfull t\n    INNER JOIN salaries s ON s.teamID = t.teamID\n    GROUP BY position_name, t.teamID\n    HAVING position_name != 'None'\n    ORDER BY average_salary DESC\n    LIMIT 15;\n\n\"\"\", con)\n\nprint(df5.head(10).to_markdown())\n\n\n|    | position_name   | average_salary   | highest_salary   |   number_player | category    |\n|---:|:----------------|:-----------------|:-----------------|----------------:|:------------|\n|  0 | first base      | $4.29M           | $26.19M          |             672 | High Salary |\n|  1 | midfielder      | $4.29M           | $26.19M          |             336 | High Salary |\n|  2 | pitcher         | $4.29M           | $26.19M          |            1008 | High Salary |\n|  3 | catcher         | $3.97M           | $33.00M          |           23425 | High Salary |\n|  4 | first base      | $3.97M           | $33.00M          |           14992 | High Salary |\n|  5 | midfielder      | $3.97M           | $33.00M          |           15929 | High Salary |\n|  6 | pitcher         | $3.97M           | $33.00M          |           17803 | High Salary |\n|  7 | second base     | $3.97M           | $33.00M          |           12181 | High Salary |\n|  8 | catcher         | $2.97M           | $30.00M          |            7552 | High Salary |\n|  9 | first base      | $2.97M           | $30.00M          |           10384 | High Salary |",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 3"
+    ]
+  },
+  {
+    "objectID": "Projects/project5.html",
+    "href": "Projects/project5.html",
+    "title": "Client Report - The War with Star Wars",
+    "section": "",
+    "text": "The Star Wars survey data from FiveThirtyEight was cleaned and formatted to build a machine learning model predicting whether a respondent earns more than $50,000. Key insights include that survey responses align with original visuals, and the final model achieves high accuracy, demonstrating the predictive potential of preference data.\n\n\n\n\nShow the code\nimport pandas as pd\nimport numpy as np\nimport plotly.express as px\nimport seaborn as sns\nfrom sklearn import tree\nimport matplotlib.pyplot as plt\nfrom lets_plot import *\n\nLetsPlot.setup_html()",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 5"
+    ]
+  },
+  {
+    "objectID": "Projects/project5.html#questiontask-1",
+    "href": "Projects/project5.html#questiontask-1",
+    "title": "Client Report - The War with Star Wars",
+    "section": "Question|Task 1",
+    "text": "Question|Task 1\nShorten the column names and clean them up for easier use with pandas. Provide a table or list that exemplifies how you fixed the names.\n\n\nmapping\nyes_no={\n    'Yes': True,\n    'No': False\n}\n\nyes_no_cols = ['Have you seen any of the 6 films in the Star Wars franchise?', 'Do you consider yourself to be a fan of the Star Wars film franchise?']\n\nstar_wars['Have you seen any of the 6 films in the Star Wars franchise?'] = star_wars['Have you seen any of the 6 films in the Star Wars franchise?'].map(yes_no)\n\nstar_wars['Do you consider yourself to be a fan of the Star Wars film franchise?'] = star_wars['Do you consider yourself to be a fan of the Star Wars film franchise?'].map(yes_no)\n\nstar_wars['Do you consider yourself to be a fan of the Expanded Universe?æ'] = star_wars['Do you consider yourself to be a fan of the Expanded Universe?æ'].map(yes_no)\n\nstar_wars['Do you consider yourself to be a fan of the Star Trek franchise?'] = star_wars['Do you consider yourself to be a fan of the Star Trek franchise?'].map(yes_no)\n\n\n\n\ncleaning\ncols_seen = {\n    'Which of the following Star Wars films have you seen? Please select all that apply.': 'seen_1',\n    'Unnamed: 4': 'seen_2',\n    'Unnamed: 5': 'seen_3',\n    'Unnamed: 6': 'seen_4',\n    'Unnamed: 7': 'seen_5',\n    'Unnamed: 8': 'seen_6'    \n}\n\nstar_wars = star_wars.rename(columns=cols_seen)\n\n\n\n\ncleaning_1\nseen_notseen = {\n    \n    'seen_notseen_1': {\n        star_wars.iloc[0,3]: True,\n        np.nan: False\n    },\n\n    'seen_notseen_2': {\n        star_wars.iloc[0,4]: True,\n        np.nan: False\n    },\n\n    'seen_notseen_3': {\n        star_wars.iloc[0,5]: True,\n        np.nan: False\n    },\n    \n    'seen_notseen_4': {\n        star_wars.iloc[0,6]: True,\n        np.nan: False\n    },\n    \n    'seen_notseen_5': {\n        star_wars.iloc[0,7]: True,\n        np.nan: False\n    },\n\n    'seen_notseen_6': {\n        star_wars.iloc[0,8]: True,\n        np.nan: False\n    },\n}\n\n\nfor movie in range(1,7):\n    star_wars['seen_' + str(movie)] = star_wars['seen_' + str(movie)].map(seen_notseen['seen_notseen_' + str(movie)])\n\n\n\n\nhot_encoding1\nstar_wars[star_wars.columns[9:15]] = star_wars[star_wars.columns[9:15]].astype(float)\n\ncols_rank = {\n    'Please rank the Star Wars films in order of preference with 1 being your favorite film in the franchise and 6 being your least favorite film.': 'ranking_1',\n    'Unnamed: 10': 'ranking_2',\n    'Unnamed: 11': 'ranking_3',\n    'Unnamed: 12': 'ranking_4',\n    'Unnamed: 13': 'ranking_5',\n    'Unnamed: 14': 'ranking_6'    \n}\n\nstar_wars = star_wars.rename(columns=cols_rank)\n\n\n\n\nhot_encoding\nmale_female={\n    'Male': 1,\n    'female': 0\n}\n\nages={\n    '18-29': 1,\n    '30-44': 2,\n    '45-60': 3,\n    '&gt; 60': 4\n}\n\nincome = {\n    '$0 - $24,999': (24999),\n    '$25,000 - $49,999': (49999),\n    '$50,000 - $99,999': (99999),\n    '$100,000 - $149,999': (149999),\n    '$150,000+': (200000)  # Upper limit for simulation\n}\n\n\neducation={\n    'Less than high school degree  ': 1,\n    'High school degree ': 2,\n    'Some college or Associate degree': 3,\n    'Bachelor degree': 4,\n    'Graduate degree': 5\n}\n\n\nstar_wars['Gender'] = star_wars['Gender'].map(male_female)\nstar_wars['Age'] = star_wars['Age'].map(ages)\nstar_wars['Household Income'] = star_wars['Household Income'].map(income)  # Random income\nstar_wars['Education'] = star_wars['Education'].map(education)\n\n\n\n\nname_clean\nstar_wars_names = star_wars_drop.rename(\n    columns=\n        {\n        'Have you seen any of the 6 films in the Star Wars franchise?': 'Seen_any_film',\n        'Do you consider yourself to be a fan of the Star Wars film franchise?':'Are_you_fan',\n        'Do you consider yourself to be a fan of the Expanded Universe?æ':'fan_expanded_universe',\n        'Do you consider yourself to be a fan of the Star Trek franchise?':'fan_star_trek',\n        'Household Income':'Household_Income',\n        'Location (Census Region)':'location'\n        }\n    )\n\nstar_wars_names.head(5)\n\n\n\n\n\n\n\n\n\n\nRespondentID\nSeen_any_film\nAre_you_fan\nseen_1\nseen_2\nseen_3\nseen_4\nseen_5\nseen_6\nranking_1\nranking_2\nranking_3\nranking_4\nranking_5\nranking_6\nfan_expanded_universe\nfan_star_trek\nGender\nAge\nHousehold_Income\nEducation\nlocation\n\n\n\n\n1\n3.292880e+09\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\n3.0\n2.0\n1.0\n4.0\n5.0\n6.0\nFalse\nFalse\n1.0\n1.0\nNaN\nNaN\nSouth Atlantic\n\n\n2\n3.292880e+09\nFalse\nNaN\nFalse\nFalse\nFalse\nFalse\nFalse\nFalse\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nTrue\n1.0\n1.0\n24999.0\n4.0\nWest South Central\n\n\n3\n3.292765e+09\nTrue\nFalse\nTrue\nTrue\nTrue\nFalse\nFalse\nFalse\n1.0\n2.0\n3.0\n4.0\n5.0\n6.0\nNaN\nFalse\n1.0\n1.0\n24999.0\nNaN\nWest North Central\n\n\n4\n3.292763e+09\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\n5.0\n6.0\n1.0\n2.0\n4.0\n3.0\nNaN\nTrue\n1.0\n1.0\n149999.0\n3.0\nWest North Central\n\n\n5\n3.292731e+09\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\n5.0\n4.0\n6.0\n2.0\n1.0\n3.0\nFalse\nFalse\n1.0\n1.0\n149999.0\n3.0\nWest North Central",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 5"
+    ]
+  },
+  {
+    "objectID": "Projects/project5.html#questiontask-2",
+    "href": "Projects/project5.html#questiontask-2",
+    "title": "Client Report - The War with Star Wars",
+    "section": "Question|Task 2",
+    "text": "Question|Task 2\nClean and format the data so that it can be used in a machine learning model. As you format the data, you should complete each item listed below. In your final report provide example(s) of the reformatted data with a short description of the changes made.\n\nFilter the dataset to respondents that have seen at least one film.\nCreate a new column that converts the age ranges to a single number. Drop the age range categorical column.\nCreate a new column that converts the education groupings to a single number. Drop the school categorical column.\nCreate a new column that converts the income ranges to a single number. Drop the income range categorical column.\nCreate your target (also known as “y” or “label”) column based on the new income range column.\nOne-hot encode all remaining categorical columns.\n\n\n\nseen_one_film\n#Filter the dataset to respondents that have seen at least one film\nstar_wars_names['seen_any_real'] = star_wars_names[['seen_1', 'seen_2', 'seen_3', 'seen_4', 'seen_5', 'seen_6']].any(axis=1)\nfiltered_df = star_wars_names[star_wars_names['seen_any_real'] == True]\nfiltered_df.head(5)\n\n\n\n\n\n\n\n\n\n\nRespondentID\nSeen_any_film\nAre_you_fan\nseen_1\nseen_2\nseen_3\nseen_4\nseen_5\nseen_6\nranking_1\nranking_2\nranking_3\nranking_4\nranking_5\nranking_6\nfan_expanded_universe\nfan_star_trek\nGender\nAge\nHousehold_Income\nEducation\nlocation\nseen_any_real\n\n\n\n\n1\n3.292880e+09\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\n3.0\n2.0\n1.0\n4.0\n5.0\n6.0\nFalse\nFalse\n1.0\n1.0\nNaN\nNaN\nSouth Atlantic\nTrue\n\n\n3\n3.292765e+09\nTrue\nFalse\nTrue\nTrue\nTrue\nFalse\nFalse\nFalse\n1.0\n2.0\n3.0\n4.0\n5.0\n6.0\nNaN\nFalse\n1.0\n1.0\n24999.0\nNaN\nWest North Central\nTrue\n\n\n4\n3.292763e+09\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\n5.0\n6.0\n1.0\n2.0\n4.0\n3.0\nNaN\nTrue\n1.0\n1.0\n149999.0\n3.0\nWest North Central\nTrue\n\n\n5\n3.292731e+09\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\n5.0\n4.0\n6.0\n2.0\n1.0\n3.0\nFalse\nFalse\n1.0\n1.0\n149999.0\n3.0\nWest North Central\nTrue\n\n\n6\n3.292719e+09\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\n1.0\n4.0\n3.0\n6.0\n5.0\n2.0\nFalse\nTrue\n1.0\n1.0\n49999.0\n4.0\nMiddle Atlantic\nTrue\n\n\n\n\n\n\n\n\nQuestion 2, 3, and 4 were completed in previous codes labels : cleaning_1, hot_encoding1, hot_encoding\n\n\ntarget_y\nfiltered_df = filtered_df.rename(columns={'Household_Income': 'y'})  # Rename the column\nfiltered_df['y_target'] = filtered_df['y']  # Assign the renamed column to 'y_target'\nfiltered_df.head(5)\n\n\n\n\n\n\n\n\n\n\nRespondentID\nSeen_any_film\nAre_you_fan\nseen_1\nseen_2\nseen_3\nseen_4\nseen_5\nseen_6\nranking_1\nranking_2\nranking_3\nranking_4\nranking_5\nranking_6\nfan_expanded_universe\nfan_star_trek\nGender\nAge\ny\nEducation\nlocation\nseen_any_real\ny_target\n\n\n\n\n1\n3.292880e+09\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\n3.0\n2.0\n1.0\n4.0\n5.0\n6.0\nFalse\nFalse\n1.0\n1.0\nNaN\nNaN\nSouth Atlantic\nTrue\nNaN\n\n\n3\n3.292765e+09\nTrue\nFalse\nTrue\nTrue\nTrue\nFalse\nFalse\nFalse\n1.0\n2.0\n3.0\n4.0\n5.0\n6.0\nNaN\nFalse\n1.0\n1.0\n24999.0\nNaN\nWest North Central\nTrue\n24999.0\n\n\n4\n3.292763e+09\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\n5.0\n6.0\n1.0\n2.0\n4.0\n3.0\nNaN\nTrue\n1.0\n1.0\n149999.0\n3.0\nWest North Central\nTrue\n149999.0\n\n\n5\n3.292731e+09\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\n5.0\n4.0\n6.0\n2.0\n1.0\n3.0\nFalse\nFalse\n1.0\n1.0\n149999.0\n3.0\nWest North Central\nTrue\n149999.0\n\n\n6\n3.292719e+09\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\n1.0\n4.0\n3.0\n6.0\n5.0\n2.0\nFalse\nTrue\n1.0\n1.0\n49999.0\n4.0\nMiddle Atlantic\nTrue\n49999.0",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 5"
+    ]
+  },
+  {
+    "objectID": "Projects/project5.html#questiontask-3",
+    "href": "Projects/project5.html#questiontask-3",
+    "title": "Client Report - The War with Star Wars",
+    "section": "Question|Task 3",
+    "text": "Question|Task 3\nValidate that the data provided on GitHub lines up with the article by recreating 2 of the visuals from the article.\n\n\nquestion_3\n# wider seen\ndf_melted_q1 = filtered_df.melt(\n    id_vars=['RespondentID'],\n    value_vars=['seen_1', 'seen_2', 'seen_3', 'seen_4', 'seen_5', 'seen_6'],\n    var_name='movies',\n    value_name= 'test'\n)\n\n\n\n\nquestion_3-1\ngrouped_counts = df_melted_q1[df_melted_q1['test'] == True].groupby('movies')['RespondentID'].count().reset_index()\ngrouped_counts.columns = ['movies', 'count']\n\n\n\n\nquestion_3-2\ntotal_count = grouped_counts['count'].sum()\ngrouped_counts['percentage'] = ((grouped_counts['count'] / 835) * 100).round(0)\n\n\n\n\nquestion_graph2\nfrom plotnine import ggplot, aes, geom_bar, labs, geom_text, theme, element_text\n\nplot = (\n    ggplot(grouped_counts, aes(x='movies', y='percentage')) +\n    geom_bar(stat='identity', fill='darkblue') +\n    geom_text(aes(label='percentage'), va='bottom', ha='center', color='Black', size=10) +  # Adding percentage labels\n    labs(\n        title='Unique Movies Seen by Respondents',\n        x='Movies',\n        y='Percentage of Respondents'\n    ) +\n    theme(\n        axis_text_x=element_text(rotation=90, hjust=1),  # Rotate x-axis labels\n        plot_title=element_text(size=16, face='bold'),\n        plot_subtitle=element_text(size=12)\n    )\n)\n\nprint(plot)\nplot.save('plot2.png') \n\n\n&lt;ggplot: (672 x 480)&gt;\n\n\n\n\n\nPicture_1\n\n\n\n\nque_graph-2\nstar_wars_names['seen_all_true'] = star_wars_names[['seen_1', 'seen_2', 'seen_3', 'seen_4', 'seen_5', 'seen_6']].all(axis=1)\n\nfiltered_df = star_wars_names[star_wars_names['seen_all_true'] == True]\n\n\n\n\nq2\nimport pandas as pd\n\n# Melt seen columns\ndf_meltedq = filtered_df.melt(\n    id_vars=['RespondentID'],\n    value_vars=['seen_1', 'seen_2', 'seen_3', 'seen_4', 'seen_5', 'seen_6'],\n    var_name='movies',\n    value_name='test'\n\n)\n# Melt ranking columns\ndf_meltedq1 = filtered_df.melt(\n    id_vars=['RespondentID'],\n    value_vars=['ranking_1', 'ranking_2', 'ranking_3', 'ranking_4', 'ranking_5', 'ranking_6'],\n    var_name='movies',\n    value_name='ranking'\n)\n\n# Extract the numeric part of the 'movies' column\ndf_meltedq['movies'] = df_meltedq['movies'].str.extract('(\\d+)', expand=False)\ndf_meltedq1['movies'] = df_meltedq1['movies'].str.extract('(\\d+)', expand=False)\n\n# Merge on RespondentID and movies\nresult = pd.merge(df_meltedq, df_meltedq1, on=['RespondentID', 'movies'])\n\n\n\n\nShow the code\nfiltered = result[result['ranking'] == 5]\n\n\n\n\nShow the code\nfrom plotnine import ggplot, aes, geom_bar, labs, theme_minimal\n\nname_movies={\n    '6': 'The Panthon Menace',\n    '5': 'Attack of the Clones',\n    '4': 'Revenge of the Sith',\n    '3': 'A New Hope',\n    '2': 'The Empire Strikes Back',\n    '1': 'Return of the Jedi'\n}\n\nfiltered['movies'] = filtered['movies'].map(name_movies)\n\ngrouped_counts = filtered.groupby('movies')['ranking'].count().reset_index()\ngrouped_counts.columns = ['movies', 'count']\n\ntotal_count = grouped_counts['count'].sum()\ngrouped_counts['percentage'] = ((grouped_counts['count'] / 471) * 100).round(0)\n\n\n\n\nquestion_graph3\nfrom plotnine import ggplot, aes, geom_bar, labs, geom_text, theme, element_text\n\nplot = (\n    ggplot(grouped_counts, aes(x='movies', y='percentage')) +\n    geom_bar(stat='identity', fill='darkblue') +\n    geom_text(aes(label='percentage'), va='bottom', ha='center', color='Black', size=10) +  # Adding percentage labels\n    labs(\n        title='What is the best star ward movies ',\n        subtitle='Of 471 respondents who have seen all 6 movies',\n        x='Movies',\n        y='Percentage of Respondents'\n    ) +\n    theme(\n        axis_text_x=element_text(rotation=90, hjust=1),  # Rotate x-axis labels\n        plot_title=element_text(size=16, face='bold'),\n        plot_subtitle=element_text(size=12)\n    )\n)\n\nprint(plot)\nplot.save('plot1.png') \n\n\n&lt;ggplot: (672 x 480)&gt;\n\n\n\n\n\nPicture_1",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 5"
+    ]
+  },
+  {
+    "objectID": "Projects/project5.html#stretch-questiontask",
+    "href": "Projects/project5.html#stretch-questiontask",
+    "title": "Client Report - The War with Star Wars",
+    "section": "Stretch Question|Task",
+    "text": "Stretch Question|Task\nBuild a machine learning model that predicts whether a person makes more than $50k. Describe your model and report the accuracy.\nI trained a Random Forest Classifier model to predict whether a respondent earns more than $50,000 based on survey data. The model’s accuracy is 80.62%.\n\n\ntraining\nstar_wars_names['ml_prep'] = star_wars_names['Household_Income'].apply(lambda x: '1' if x &gt; 50000 else '0')\n\nstar_wars_names.head(5)\n\n\n\n\n\n\n\n\n\n\nRespondentID\nSeen_any_film\nAre_you_fan\nseen_1\nseen_2\nseen_3\nseen_4\nseen_5\nseen_6\nranking_1\nranking_2\nranking_3\nranking_4\nranking_5\nranking_6\nfan_expanded_universe\nfan_star_trek\nGender\nAge\nHousehold_Income\nEducation\nlocation\nseen_any_real\nseen_all_true\nml_prep\n\n\n\n\n1\n3.292880e+09\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\n3.0\n2.0\n1.0\n4.0\n5.0\n6.0\nFalse\nFalse\n1.0\n1.0\nNaN\nNaN\nSouth Atlantic\nTrue\nTrue\n0\n\n\n2\n3.292880e+09\nFalse\nNaN\nFalse\nFalse\nFalse\nFalse\nFalse\nFalse\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nTrue\n1.0\n1.0\n24999.0\n4.0\nWest South Central\nFalse\nFalse\n0\n\n\n3\n3.292765e+09\nTrue\nFalse\nTrue\nTrue\nTrue\nFalse\nFalse\nFalse\n1.0\n2.0\n3.0\n4.0\n5.0\n6.0\nNaN\nFalse\n1.0\n1.0\n24999.0\nNaN\nWest North Central\nTrue\nFalse\n0\n\n\n4\n3.292763e+09\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\n5.0\n6.0\n1.0\n2.0\n4.0\n3.0\nNaN\nTrue\n1.0\n1.0\n149999.0\n3.0\nWest North Central\nTrue\nTrue\n1\n\n\n5\n3.292731e+09\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\nTrue\n5.0\n4.0\n6.0\n2.0\n1.0\n3.0\nFalse\nFalse\n1.0\n1.0\n149999.0\n3.0\nWest North Central\nTrue\nTrue\n1\n\n\n\n\n\n\n\n\n\n\nreplace\nfor column in star_wars_names.columns:\n    most_common_value = star_wars_names[column].mode()[0]  # Get the mode (most frequent value) of the column\n    star_wars_names[column].fillna(most_common_value, inplace=True)\n\n\n\n\nbuilding_model\nX = star_wars_names[['RespondentID', 'Seen_any_film', 'seen_1', 'seen_2',\n       'seen_3', 'seen_4', 'seen_5', 'seen_6', 'ranking_1', 'ranking_2',\n       'ranking_3', 'ranking_4', 'ranking_5', 'ranking_6',\n        'Gender', 'Age',\n       'Household_Income', 'Education']]\n\ny=star_wars_names['ml_prep']\n\nfrom sklearn.model_selection import train_test_split\n\nX_train, X_test, y_train, y_test = train_test_split(\n          X, y, test_size=0.3, random_state=1)\n\n\n\n\nfunction\nfrom sklearn.metrics import accuracy_score, confusion_matrix, classification_report\n\ndef print_score(clf, X_train, y_train, X_test, y_test, train=True):\n    if train:\n        pred = clf.predict(X_train)\n        clf_report = pd.DataFrame(classification_report(y_train, pred, output_dict=True))\n        print(\"Train Result:\\n================================================\")\n        print(f\"Accuracy Score: {accuracy_score(y_train, pred) * 100:.2f}%\")\n        print(\"_______________________________________________\")\n        print(f\"CLASSIFICATION REPORT:\\n{clf_report}\")\n        print(\"_______________________________________________\")\n        print(f\"Confusion Matrix: \\n {confusion_matrix(y_train, pred)}\\n\")\n        \n    elif train==False:\n        pred = clf.predict(X_test)\n        clf_report = pd.DataFrame(classification_report(y_test, pred, output_dict=True))\n        print(\"Test Result:\\n================================================\")        \n        print(f\"Accuracy Score: {accuracy_score(y_test, pred) * 100:.2f}%\")\n        print(\"_______________________________________________\")\n        print(f\"CLASSIFICATION REPORT:\\n{clf_report}\")\n        print(\"_______________________________________________\")\n        print(f\"Confusion Matrix: \\n {confusion_matrix(y_test, pred)}\\n\")\n\n\n\n\nrunning_model1\nfrom sklearn.ensemble import RandomForestClassifier\n\nclf = RandomForestClassifier(n_estimators=100, random_state=42)\nclf.fit(X_train, y_train)\n\nprint_score(clf, X_train, y_train, X_test, y_test, train=True)\nprint_score(clf, X_train, y_train, X_test, y_test, train=False)\n\n\nTrain Result:\n================================================\nAccuracy Score: 100.00%\n_______________________________________________\nCLASSIFICATION REPORT:\n               0      1  accuracy  macro avg  weighted avg\nprecision    1.0    1.0       1.0        1.0           1.0\nrecall       1.0    1.0       1.0        1.0           1.0\nf1-score     1.0    1.0       1.0        1.0           1.0\nsupport    459.0  371.0       1.0      830.0         830.0\n_______________________________________________\nConfusion Matrix: \n [[459   0]\n [  0 371]]\n\nTest Result:\n================================================\nAccuracy Score: 80.62%\n_______________________________________________\nCLASSIFICATION REPORT:\n                    0           1  accuracy   macro avg  weighted avg\nprecision    0.829787    0.779762   0.80618    0.804775      0.806882\nrecall       0.808290    0.803681   0.80618    0.805986      0.806180\nf1-score     0.818898    0.791541   0.80618    0.805219      0.806372\nsupport    193.000000  163.000000   0.80618  356.000000    356.000000\n_______________________________________________\nConfusion Matrix: \n [[156  37]\n [ 32 131]]",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 5"
+    ]
+  },
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "Dallin Williams’ CV",
+    "section": "",
+    "text": "Machine Learning Engineer, Data Analyst, Life-Long Student\n\nMy LinkedIn | My GitHub\n\n\n\nStudying hard, crying harder\n\n\nPython, Linear Regression models, and Feedforward Neural Network Models with Sigmoid Activation Functions\n\n\n\nMachine Learning, Artificial Intelligence Tools, and Data Analytics\n\n\n\n\n2014-2017 Minot High School, Minot, ND, USA\n2020-Current BYU-Idaho, Rexburg, ID, USA\n\n\n\n2021 Best Chili - Minot 1st Ward Chili Cookoff\n\n\n\nN/A Yet\n\n\nN/A Yet\n\n\n\nN/A Yet\n\n\n\n\n2020-Current Full-Time Student, BYU-Idaho"
+  },
+  {
+    "objectID": "resume.html#currently",
+    "href": "resume.html#currently",
+    "title": "Dallin Williams’ CV",
+    "section": "",
+    "text": "Studying hard, crying harder\n\n\nPython, Linear Regression models, and Feedforward Neural Network Models with Sigmoid Activation Functions\n\n\n\nMachine Learning, Artificial Intelligence Tools, and Data Analytics"
+  },
+  {
+    "objectID": "resume.html#education",
+    "href": "resume.html#education",
+    "title": "Dallin Williams’ CV",
+    "section": "",
+    "text": "2014-2017 Minot High School, Minot, ND, USA\n2020-Current BYU-Idaho, Rexburg, ID, USA"
+  },
+  {
+    "objectID": "resume.html#awards",
+    "href": "resume.html#awards",
+    "title": "Dallin Williams’ CV",
+    "section": "",
+    "text": "2021 Best Chili - Minot 1st Ward Chili Cookoff"
+  },
+  {
+    "objectID": "resume.html#publications",
+    "href": "resume.html#publications",
+    "title": "Dallin Williams’ CV",
+    "section": "",
+    "text": "N/A Yet\n\n\nN/A Yet\n\n\n\nN/A Yet"
+  },
+  {
+    "objectID": "resume.html#occupation",
+    "href": "resume.html#occupation",
+    "title": "Dallin Williams’ CV",
+    "section": "",
+    "text": "2020-Current Full-Time Student, BYU-Idaho"
+  },
+  {
+    "objectID": "Templates/DS250_Template.html",
+    "href": "Templates/DS250_Template.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Uncomment the entire section to use this template\n\n\n\n\n\n\n\n Back to top"
   }
 ]
