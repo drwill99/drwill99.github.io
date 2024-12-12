@@ -9,16 +9,51 @@
   {
     "objectID": "story_telling.html",
     "href": "story_telling.html",
-    "title": "about me",
+    "title": "About Me",
     "section": "",
-    "text": "MarkDown Basics"
+    "text": "Hi, I’m Dallin Williams, a 25-year-old computer science student at BYU-Idaho with an emphasis in machine learning. I’m passionate about solving complex problems, fostering innovation, and building meaningful connections."
   },
   {
-    "objectID": "story_telling.html#title-2-header",
-    "href": "story_telling.html#title-2-header",
-    "title": "about me",
+    "objectID": "story_telling.html#who-i-am",
+    "href": "story_telling.html#who-i-am",
+    "title": "About Me",
     "section": "",
-    "text": "MarkDown Basics"
+    "text": "Hi, I’m Dallin Williams, a 25-year-old computer science student at BYU-Idaho with an emphasis in machine learning. I’m passionate about solving complex problems, fostering innovation, and building meaningful connections."
+  },
+  {
+    "objectID": "story_telling.html#education",
+    "href": "story_telling.html#education",
+    "title": "About Me",
+    "section": "🎓 Education",
+    "text": "🎓 Education\n\nBachelor’s in Computer Science (Machine Learning Emphasis) - BYU-Idaho\nRelevant Courses: Machine Learning, Data Science Programming, Linear Algebra, Discrete Mathematics, Networking"
+  },
+  {
+    "objectID": "story_telling.html#skills-interests",
+    "href": "story_telling.html#skills-interests",
+    "title": "About Me",
+    "section": "🛠️ Skills & Interests",
+    "text": "🛠️ Skills & Interests\n\nTechnical Skills: Python, R, SQL, GitHub, Machine Learning, Data Visualization\nPassions: Conflict resolution, peacebuilding, and exploring the intersection of technology and social good\nHobbies: Backpacking, off-road driving, kayaking, and horseback riding"
+  },
+  {
+    "objectID": "story_telling.html#professional-goals",
+    "href": "story_telling.html#professional-goals",
+    "title": "About Me",
+    "section": "💼 Professional Goals",
+    "text": "💼 Professional Goals\n\nShort Term: Pursue an internship in the biomedical technology field.\nLong Term: Develop AI solutions to tackle real-world medical challenges and earn a Master’s in Computer Science."
+  },
+  {
+    "objectID": "story_telling.html#personal-highlights",
+    "href": "story_telling.html#personal-highlights",
+    "title": "About Me",
+    "section": "🌍 Personal Highlights",
+    "text": "🌍 Personal Highlights\n\nRecently attended my first BYU football game!\nPreparing for Christmas with my girlfriend’s amazing family, including a trip to Scotland.\nInspired by leaders in peacebuilding and ethical governance."
+  },
+  {
+    "objectID": "story_telling.html#lets-connect",
+    "href": "story_telling.html#lets-connect",
+    "title": "About Me",
+    "section": "📬 Let’s Connect",
+    "text": "📬 Let’s Connect\n\nLinkedIn\nGitHub: github.com/drwill99\nEmail: dallin.williams@example.com\n\nMarkDown Basics"
   },
   {
     "objectID": "projects.html",
