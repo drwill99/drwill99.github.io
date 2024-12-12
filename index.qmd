@@ -1,11 +1,33 @@
 ---
-title: "about me"
-subtitle: "my data science portfolio"
-# use quarto markdown to 
+title: "Welcome!"
+subtitle: "I'm Dallin!"
 ---
 
-# Title 1 Header
-## Title 2 Header
+## 🌟 Who I Am
+Hi, I’m **Dallin Williams**, a 25-year-old computer science student at BYU-Idaho with an emphasis in machine learning. I’m passionate about solving complex problems, fostering innovation, and building meaningful connections.
 
-[MarkDown Basics](https://quarto.org/docs/authoring/markdown-basics.html#links-images)
+## 🎓 Education
+- **Bachelor’s in Computer Science** (Machine Learning Emphasis) - BYU-Idaho
+- Relevant Courses: Machine Learning, Data Science Programming, Linear Algebra, Discrete Mathematics, Networking
 
+## 🛠️ Skills & Interests
+- **Technical Skills**: Python, R, SQL, GitHub, Machine Learning, Data Visualization
+- **Passions**: Conflict resolution, peacebuilding, and exploring the intersection of technology and social good
+- **Hobbies**: Backpacking, off-road driving, kayaking, and horseback riding
+
+
+## 💼 Professional Goals
+- **Short Term**: Pursue an internship in the biomedical technology field.
+- **Long Term**: Develop AI solutions to tackle real-world medical challenges and earn a Master’s in Computer Science.
+
+
+## 🌍 Personal Highlights
+- Recently attended my first BYU football game!
+- Preparing for Christmas with my girlfriend's amazing family, including a trip to Scotland.
+- Inspired by leaders in peacebuilding and ethical governance.
+
+
+## 📬 Let’s Connect
+- [LinkedIn](https://www.linkedin.com/in/drwill99)
+- GitHub: [github.com/drwill99](https://github.com/drwill99)
+- Email: dallin.williams@example.com
