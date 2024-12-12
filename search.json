@@ -1,24 +1,109 @@
 [
   {
-    "objectID": "Templates/DS350_Template.html",
-    "href": "Templates/DS350_Template.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "TODO: Update with template from Paul\n\n\n\n\n Back to top"
-  },
-  {
     "objectID": "story_telling.html",
     "href": "story_telling.html",
+    "title": "About Me",
+    "section": "",
+    "text": "Hi, I’m Dallin Williams, a 25-year-old computer science student at BYU-Idaho with an emphasis in machine learning. I’m passionate about solving complex problems, fostering innovation, and building meaningful connections."
+  },
+  {
+    "objectID": "story_telling.html#who-i-am",
+    "href": "story_telling.html#who-i-am",
+    "title": "About Me",
+    "section": "",
+    "text": "Hi, I’m Dallin Williams, a 25-year-old computer science student at BYU-Idaho with an emphasis in machine learning. I’m passionate about solving complex problems, fostering innovation, and building meaningful connections."
+  },
+  {
+    "objectID": "story_telling.html#education",
+    "href": "story_telling.html#education",
+    "title": "About Me",
+    "section": "🎓 Education",
+    "text": "🎓 Education\n\nBachelor’s in Computer Science (Machine Learning Emphasis) - BYU-Idaho\nRelevant Courses: Machine Learning, Data Science Programming, Linear Algebra, Discrete Mathematics, Networking"
+  },
+  {
+    "objectID": "story_telling.html#skills-interests",
+    "href": "story_telling.html#skills-interests",
+    "title": "About Me",
+    "section": "🛠️ Skills & Interests",
+    "text": "🛠️ Skills & Interests\n\nTechnical Skills: Python, R, SQL, GitHub, Machine Learning, Data Visualization\nPassions: Conflict resolution, peacebuilding, and exploring the intersection of technology and social good\nHobbies: Backpacking, off-road driving, kayaking, and horseback riding"
+  },
+  {
+    "objectID": "story_telling.html#professional-goals",
+    "href": "story_telling.html#professional-goals",
+    "title": "About Me",
+    "section": "💼 Professional Goals",
+    "text": "💼 Professional Goals\n\nShort Term: Pursue an internship in the biomedical technology field.\nLong Term: Develop AI solutions to tackle real-world medical challenges and earn a Master’s in Computer Science."
+  },
+  {
+    "objectID": "story_telling.html#personal-highlights",
+    "href": "story_telling.html#personal-highlights",
+    "title": "About Me",
+    "section": "🌍 Personal Highlights",
+    "text": "🌍 Personal Highlights\n\nRecently attended my first BYU football game!\nPreparing for Christmas with my girlfriend’s amazing family, including a trip to Scotland.\nInspired by leaders in peacebuilding and ethical governance."
+  },
+  {
+    "objectID": "story_telling.html#lets-connect",
+    "href": "story_telling.html#lets-connect",
+    "title": "About Me",
+    "section": "📬 Let’s Connect",
+    "text": "📬 Let’s Connect\n\nLinkedIn\nGitHub: github.com/drwill99\nEmail: dallin.williams@example.com\n\nMarkDown Basics"
+  },
+  {
+    "objectID": "ml.html",
+    "href": "ml.html",
     "title": "about me",
     "section": "",
     "text": "MarkDown Basics"
   },
   {
-    "objectID": "story_telling.html#title-2-header",
-    "href": "story_telling.html#title-2-header",
+    "objectID": "ml.html#title-2-header",
+    "href": "ml.html#title-2-header",
     "title": "about me",
     "section": "",
     "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "competition.html",
+    "href": "competition.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "competition.html#title-2-header",
+    "href": "competition.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "Templates/DS250_Template.html",
+    "href": "Templates/DS250_Template.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Uncomment the entire section to use this template\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Projects/project2.html",
+    "href": "Projects/project2.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "Projects/project3.html",
+    "href": "Projects/project3.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 3"
+    ]
   },
   {
     "objectID": "projects.html",
@@ -41,42 +126,6 @@
     ]
   },
   {
-    "objectID": "Projects/project4.html",
-    "href": "Projects/project4.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "DS250 Projects",
-      "Project 4"
-    ]
-  },
-  {
-    "objectID": "Projects/project2.html",
-    "href": "Projects/project2.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "DS250 Projects",
-      "Project 2"
-    ]
-  },
-  {
-    "objectID": "ml.html",
-    "href": "ml.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "ml.html#title-2-header",
-    "href": "ml.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
     "objectID": "full_stack.html",
     "href": "full_stack.html",
     "title": "about me",
@@ -89,95 +138,6 @@
     "title": "about me",
     "section": "",
     "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "competition.html",
-    "href": "competition.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "competition.html#title-2-header",
-    "href": "competition.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "cleansing.html",
-    "href": "cleansing.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "cleansing.html#title-2-header",
-    "href": "cleansing.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "exploration.html",
-    "href": "exploration.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "exploration.html#title-2-header",
-    "href": "exploration.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "index.html#title-2-header",
-    "href": "index.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "Projects/project1.html",
-    "href": "Projects/project1.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "DS250 Projects",
-      "Project 1"
-    ]
-  },
-  {
-    "objectID": "Projects/project3.html",
-    "href": "Projects/project3.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "DS250 Projects",
-      "Project 3"
-    ]
-  },
-  {
-    "objectID": "Projects/project5.html",
-    "href": "Projects/project5.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "DS250 Projects",
-      "Project 5"
-    ]
   },
   {
     "objectID": "resume.html",
@@ -222,10 +182,85 @@
     "text": "2020-Current Full-Time Student, BYU-Idaho"
   },
   {
-    "objectID": "Templates/DS250_Template.html",
-    "href": "Templates/DS250_Template.html",
+    "objectID": "exploration.html",
+    "href": "exploration.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "exploration.html#title-2-header",
+    "href": "exploration.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "Projects/project5.html",
+    "href": "Projects/project5.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Uncomment the entire section to use this template\n\n\n\n\n\n\n\n Back to top"
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 5"
+    ]
+  },
+  {
+    "objectID": "Projects/project4.html",
+    "href": "Projects/project4.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 4"
+    ]
+  },
+  {
+    "objectID": "Projects/project1.html",
+    "href": "Projects/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "Templates/DS350_Template.html",
+    "href": "Templates/DS350_Template.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "TODO: Update with template from Paul\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "index.html#title-2-header",
+    "href": "index.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "cleansing.html",
+    "href": "cleansing.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "cleansing.html#title-2-header",
+    "href": "cleansing.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
   }
 ]
