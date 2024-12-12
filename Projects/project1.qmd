@@ -1,7 +1,7 @@
 ---
-title: "Client Report - [Insert Project Title]"
+title: "Client Report - What's in a Name?"
 subtitle: "Course DS 250"
-author: "[STUDENT NAME]"
+author: "Dallin Williams"
 format:
   html:
     self-contained: true
@@ -25,4 +25,184 @@ execute:
     
 ---
 
-### Paste in a template
+# Project 1: What's in a Name?
+
+## Question 1: How does your name at your birth year compare to its use historically?
+
+```{python}
+import pandas as pd
+from lets_plot import *
+
+LetsPlot.setup_html()
+
+# Load the data
+url = "https://raw.githubusercontent.com/byuidatascience/data4names/master/data-raw/names_year/names_year.csv"
+names_data = pd.read_csv(url)
+
+# Filter for name "Dallin"
+dallin_data = names_data[names_data['name'] == 'Dallin'] # I've always wanted to be a variable :)
+
+# Remove commas from years and increment by 5-years
+year_breaks = list(range(int(dallin_data['year'].min()), int(dallin_data['year'].max()) + 1, 5))
+
+# Create plot, trend of name "Dallin" over time
+dallin_plot = (ggplot(dallin_data, aes(x = 'year', y = 'Total')) 
+        + geom_line() 
+        + ggtitle('Trend of the name "Dallin" over time') 
+        + xlab('Year') 
+        + ylab('Total Occurrences')
+        + scale_x_continuous(breaks = year_breaks))  # Use continuous scale with 5-year increments
+
+dallin_plot
+```
+
+**Analysis:** 
+The name "Dallin" saw increased popularity during the early 2000s, likely correlating with certain cultural trends or notable figures (example: Dallin H. Oaks). It has since experienced a steady decline in use.
+
+---
+
+## Question 2: If you talked to someone named Brittany on the phone, what is your guess of his or her age? What ages would you not guess?
+
+```{python}
+# Filter for name "Brittany"
+brittany_data = names_data[names_data['name'] == 'Brittany']
+
+# Remove commas from years and increment by 5-years
+year_breaks = list(range(int(brittany_data['year'].min()), int(brittany_data['year'].max()) + 1, 5))
+
+# Create plot, trend of name "Brittany" over time
+brittany_plot = (ggplot(brittany_data, aes(x = 'year', y = 'Total')) 
+        + geom_line() 
+        + ggtitle('Trend of the name "Brittany" over time') 
+        + xlab('Year') 
+        + ylab('Total Occurrences')
+        + scale_x_continuous(breaks = year_breaks))
+
+brittany_plot
+```
+
+**Analysis:**
+The name "Brittany" reached its peak popularity between the late 1980s and early 1990s. If speaking to someone named Brittany, they are likely in their late 20s to early 30s. Ages younger than 20 or older than 40 would be unlikely.
+
+---
+
+## Question 3: Mary, Martha, Peter, and Paul are all Christian names. From 1920 - 2000, compare the name usage of each of the four names in a single chart. What trends do you notice?
+
+```{python}
+christian_data = names_data[(names_data['name'].isin(['Mary', 'Martha', 'Peter', 'Paul'])) & 
+                             (names_data['year'] >= 1920) & 
+                             (names_data['year'] <= 2000)]
+
+# Remove commas from years and increment by 5-years
+year_breaks = list(range(int(christian_data['year'].min()), int(christian_data['year'].max()) + 1, 5))
+
+# Plot the trends of the four names
+christian_plot = (
+  ggplot(christian_data, aes(x = 'year', y = 'Total', color='name')) 
+        + geom_line() 
+        + ggtitle('Christian Names (Mary, Martha, Peter, Paul) 1920-2000') 
+        + xlab('Year') 
+        + ylab('Total Occurrences')
+        + scale_x_continuous(breaks = year_breaks)
+)
+
+christian_plot
+```
+
+**Analysis:** 
+Among the four names, "Mary" consistently remains the most popular, though it has seen a gradual decline since the 1950s. "Paul" and "Peter" show moderate use, while "Martha" has been in decline since the 1960s.
+
+---
+
+## Question 4: Think of a unique name from a famous movie. Plot the usage of that name and see how changes line up with the movie release. Does it look like the movie had an effect on usage?
+
+```{python}
+# Filter the dataset for the name "Leia" (e.g., from Star Wars)
+leia_data = names_data[names_data['name'] == 'Leia']
+
+# Remove commas from years and increment by 5-years
+year_breaks = list(range(int(leia_data['year'].min()), int(leia_data['year'].max()) + 1, 5))
+
+# Plot the total occurrences of the name over time with reference to the movies release dates (1977 & 2002)
+leia_plot = (
+    ggplot(leia_data, aes(x='year', y='Total')) 
+    + geom_line() 
+    + geom_vline(xintercept=1977, color='blue', linetype='dashed')
+    + geom_text(x=1977, y=leia_data['Total'].max(),
+                label='Episode IV (1977)',
+                color='blue', hjust=-0.1, vjust=-0.5)
+    + geom_vline(xintercept=2002, color='red', linetype='dashed')
+    + geom_text(x=2002, y=leia_data['Total'].max(),
+                label='Episode II (2002)',
+                color='red', hjust=-0.1, vjust=-0.5)
+    + ggtitle('Trend of the name "Leia" and Star Wars release') 
+    + xlab('Year') 
+    + ylab('Total Occurrences')
+    + scale_x_continuous(breaks=list(range(
+      int(leia_data['year'].min()), 
+      int(leia_data['year'].max()) + 1, 10
+      )
+    )
+  )
+)
+
+leia_plot
+```
+
+**Analysis:** 
+The name "Leia" experienced a small increase in use following the release of *Star Wars: Episode IV - A New Hope* in 1977. However, a much larger increase ocurred after the release of *Star Wars: Episode II - Attack of the Clones*. This suggests that once *Star Wars* became mainstream and "cool", the popularity of the name increased relatively dramatically.
+
+---
+
+## Stretch 
+
+```{python}
+# Filter for name "Elliot"
+elliot_data = names_data[names_data['name'] == 'Elliot']
+
+# Define significant years and labels for vertical lines
+release_years = [1982, 1985, 2002]  # These years are based on events related to E.T. movie releases
+labels = ['E.T Released', 'Second Release', 'Third Release']
+
+# Create plot: trend of name "Elliot" over time
+elliot_plot = (
+    ggplot(elliot_data, aes(x='year', y='Total', color='name')) 
+    + geom_line()
+    + geom_vline(xintercept=1977, color='blue', linetype='dashed')
+    + geom_text(x=1977, y=leia_data['Total'].max(),
+                label='Episode IV (1977)',
+                color='blue', hjust=-0.1, vjust=-0.5)
+    + ggtitle('Elliot... What?') 
+    + xlab('year') 
+    + ylab('Total')
+    + scale_x_continuous(breaks=list(range(1950, 2021, 10)))  # 10-year increments
+)
+
+elliot_plot
+```
+
+```{python}
+# Adjusted function based on the structure where each state is a separate column
+def answer_name_questions_corrected(name, state_column=None):
+    # Filter for the given name
+    filtered_data = names_data[names_data['name'] == name]
+    
+    # Answer 1: How many babies were named "Oliver" in the given state (e.g., Utah)
+    if name == "Oliver" and state_column:
+        total_oliver_state = filtered_data[state_column].sum()
+        return f"Total number of babies named Oliver in {state_column}: {total_oliver_state}"
+    
+    # Answer 2: Earliest year the name "Felisha" was used
+    if name == "Felisha":
+        earliest_year = filtered_data['year'].min()
+        return f"The earliest year that the name Felisha was used: {earliest_year}"
+
+# Run the function for Oliver in Utah (column "UT")
+oliver_utah_corrected_answer = answer_name_questions_corrected("Oliver", "UT")
+
+# Run the function for Felisha
+felisha_corrected_answer = answer_name_questions_corrected("Felisha")
+
+oliver_utah_corrected_answer, felisha_corrected_answer
+
+```
