@@ -46,7 +46,7 @@
     "href": "story_telling.html#lets-connect",
     "title": "About Me",
     "section": "📬 Let’s Connect",
-    "text": "📬 Let’s Connect\n\nLinkedIn\nGitHub: github.com/drwill99\nEmail: dallin.williams@example.com\n\nMarkDown Basics"
+    "text": "📬 Let’s Connect\n\nLinkedIn\nGitHub: github.com/drwill99\nEmail: dallin.williams@example.com"
   },
   {
     "objectID": "ml.html",
@@ -238,16 +238,51 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "about me",
+    "title": "Welcome!",
     "section": "",
-    "text": "MarkDown Basics"
+    "text": "Hi, I’m Dallin Williams, a 25-year-old computer science student at BYU-Idaho with an emphasis in machine learning. I’m passionate about solving complex problems, fostering innovation, and building meaningful connections."
   },
   {
-    "objectID": "index.html#title-2-header",
-    "href": "index.html#title-2-header",
-    "title": "about me",
+    "objectID": "index.html#who-i-am",
+    "href": "index.html#who-i-am",
+    "title": "Welcome!",
     "section": "",
-    "text": "MarkDown Basics"
+    "text": "Hi, I’m Dallin Williams, a 25-year-old computer science student at BYU-Idaho with an emphasis in machine learning. I’m passionate about solving complex problems, fostering innovation, and building meaningful connections."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Welcome!",
+    "section": "🎓 Education",
+    "text": "🎓 Education\n\nBachelor’s in Computer Science (Machine Learning Emphasis) - BYU-Idaho\nRelevant Courses: Machine Learning, Data Science Programming, Linear Algebra, Discrete Mathematics, Networking"
+  },
+  {
+    "objectID": "index.html#skills-interests",
+    "href": "index.html#skills-interests",
+    "title": "Welcome!",
+    "section": "🛠️ Skills & Interests",
+    "text": "🛠️ Skills & Interests\n\nTechnical Skills: Python, R, SQL, GitHub, Machine Learning, Data Visualization\nPassions: Conflict resolution, peacebuilding, and exploring the intersection of technology and social good\nHobbies: Backpacking, off-road driving, kayaking, and horseback riding"
+  },
+  {
+    "objectID": "index.html#professional-goals",
+    "href": "index.html#professional-goals",
+    "title": "Welcome!",
+    "section": "💼 Professional Goals",
+    "text": "💼 Professional Goals\n\nShort Term: Pursue an internship in the biomedical technology field.\nLong Term: Develop AI solutions to tackle real-world medical challenges and earn a Master’s in Computer Science."
+  },
+  {
+    "objectID": "index.html#personal-highlights",
+    "href": "index.html#personal-highlights",
+    "title": "Welcome!",
+    "section": "🌍 Personal Highlights",
+    "text": "🌍 Personal Highlights\n\nRecently attended my first BYU football game!\nPreparing for Christmas with my girlfriend’s amazing family, including a trip to Scotland.\nInspired by leaders in peacebuilding and ethical governance."
+  },
+  {
+    "objectID": "index.html#lets-connect",
+    "href": "index.html#lets-connect",
+    "title": "Welcome!",
+    "section": "📬 Let’s Connect",
+    "text": "📬 Let’s Connect\n\nLinkedIn\nGitHub: github.com/drwill99\nEmail: dallin.williams@example.com"
   },
   {
     "objectID": "cleansing.html",
