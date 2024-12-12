@@ -1,88 +1,64 @@
 ---
 layout: cv
-title: Isaac Newtons's CV
+title: Dallin Williams' CV
 ---
-# Isaac Newton
-Physicist, Mathematician, Cambridge professor.
+# Dallin Williams
+Machine Learning Engineer, Data Analyst, Life-Long Student
 
 <div id="webaddress">
-<a href="isaac@applesdofall.org">isaac@applesdofall.org</a>
-| <a href="http://en.wikipedia.org/wiki/Isaac_Newton">My wikipedia page</a>
+<a href="www.linkedin.com/in/drwill99">My LinkedIn</a>
+| <a href="https://github.com/drwill99">My GitHub</a>
 </div>
 
 
 ## Currently
 
-Standing on the shoulders of giants
+Studying hard, crying harder
 
 ### Specialized in
 
-Laws of motion, gravitation, minting coins, disliking [Robert Hooke](http://en.wikipedia.org/wiki/Robert_Hooke)
+Python, Linear Regression models, and Feedforward Neural Network Models with Sigmoid Activation Functions
 
 
 ### Research interests
 
-Cooling, power series, optics, alchemy, planetary motions, apples.
+Machine Learning, Artificial Intelligence Tools, and Data Analytics
 
 
 ## Education
 
-`1654-1660`
-__The King's School, Grantham.__
+`2014-2017`
+__Minot High School, Minot, ND, USA__
 
-`June 1661 - now`
-__Trinity College, Cambridge__
-
-- Sizar
-
-`1667 - death`
-__Trinity College, Cambridge__
-
-- Fellow
-
+`2020-Current`
+__BYU-Idaho, Rexburg, ID, USA__
 
 
 ## Awards
 
-`2012`
-President, *Royal Society*, London, UK
-
-Associate, *French Academy of Science*, Paris, France
-
+`2021`
+Best Chili - Minot 1st Ward Chili Cookoff
 
 
 ## Publications
 
-<!-- A list is also available [online](http://scholar.google.co.uk/citations?user=LTOTl0YAAAAJ) -->
+N/A Yet
+
 
 ### Journals
 
-`1669`
-Newton Sir I, De analysi per æquationes numero terminorum infinitas. 
+N/A Yet
 
-`1669`
-Lectiones opticæ.
-
-etc. etc. etc.
 
 ### Patents
 
-`2012`
-Infinitesimal calculus for solutions to physics problems, [SMBC](http://www.techdirt.com/articles/20121011/09312820678/if-patents-had-been-around-time-newton.shtml) patent 001
+N/A Yet
 
 
 ## Occupation
 
-`1600`
-__Royal Mint__, London
-
-- Warden
-- Minted coins
-
-`1600`
-__Lucasian professor of Mathematics__, Cambridge University
-
-
+`2020-Current`
+Full-Time Student, BYU-Idaho
 
 <!-- ### Footer
 
